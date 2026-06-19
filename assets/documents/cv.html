@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mpho Nethomboni – CV</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 40px 20px;
+    }
+    .cv-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #c9922a;
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .title {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .contact-info {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .contact-info a {
+      color: #c9922a;
+      text-decoration: none;
+    }
+    section {
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #c9922a;
+      letter-spacing: 0.5px;
+    }
+    .summary-text {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .skill-category h3 {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    .skill-category ul {
+      list-style: none;
+      font-size: 12px;
+      color: #333;
+    }
+    .skill-category li {
+      margin-bottom: 6px;
+      padding-left: 0;
+    }
+    .skill-category li:before {
+      content: "• ";
+      color: #c9922a;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+    .project {
+      margin-bottom: 20px;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .project-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .project-meta {
+      font-size: 11px;
+      color: #666;
+      font-style: italic;
+    }
+    .project-tech {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .project-tech strong {
+      color: #1a1a1a;
+    }
+    .project-desc {
+      font-size: 12px;
+      color: #333;
+      margin-top: 8px;
+    }
+    .project-desc ul {
+      list-style: none;
+      margin-left: 0;
+      margin-top: 6px;
+    }
+    .project-desc li {
+      font-size: 12px;
+      color: #333;
+      margin-bottom: 5px;
+      padding-left: 16px;
+    }
+    .project-desc li:before {
+      content: "▪ ";
+      color: #c9922a;
+      margin-right: 6px;
+      margin-left: -16px;
+    }
+    .education-item {
+      margin-bottom: 14px;
+    }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .edu-detail {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 2px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media print {
+      body {
+        padding: 0;
+      }
+      .cv-container {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+    @media (max-width: 700px) {
+      .cv-container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .skills-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .project-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <!-- HEADER -->
+    <header>
+      <h1>MPHO NETHOMBONI</h1>
+      <div class="title">Junior Software Developer</div>
+      <div class="contact-info">
+        067 111 2527 / 067 090 2885 • <a href="mailto:mphonethomboni@gmail.com">mphonethomboni@gmail.com</a> • 
+        <a href="https://github.com/nethomboni" target="_blank">github.com/nethomboni</a> • Johannesburg, South Africa
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary-text">
+        Third-year Diploma in Information Technology (Software Development) student with practical experience developing web applications, business systems, and database-driven solutions using HTML, CSS, JavaScript, PHP, C#, SQL, and Git. Skilled in building responsive user interfaces, developing forms and validation systems, integrating databases, troubleshooting software issues, and creating reliable solutions for real-world business needs. Passionate about software development and eager to contribute as a Junior Software Developer while continuing to expand technical expertise.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend Development</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>User Interface Development</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Backend Development</h3>
+          <ul>
+            <li>PHP</li>
+            <li>C#</li>
+            <li>ASP.NET Fundamentals</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Databases</h3>
+          <ul>
+            <li>SQL</li>
+            <li>MySQL</li>
+            <li>Supabase</li>
+            <li>Database Design</li>
+            <li>CRUD Operations</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Visual Studio</li>
+            <li>Visual Studio Code</li>
+            <li>Vercel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT EXPERIENCE -->
+    <section>
+      <h2>Project Experience</h2>
+      
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">Lumina Store – E-Commerce Platform</span>
+        </div>
+        <div class="project-tech"><strong>Technologies:</strong> HTML, CSS, JavaScript, TypeScript, Supabase, Git</div>
+        <div class="project-desc">
+          <ul>
+            <li>Developed responsive user interfaces for a modern e-commerce application</li>
+            <li>Integrated frontend components with backend services</li>
+            <li>Implemented product management functionality</li>
+            <li>Worked with database-driven features using Supabase</li>
+            <li>Participated in debugging and testing workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">Pastimes – Second-Hand Clothing Marketplace</span>
+        </div>
+        <div class="project-tech"><strong>Technologies:</strong> PHP, HTML, CSS, JavaScript, MySQL</div>
+        <div class="project-desc">
+          <ul>
+            <li>Built data-driven web pages for an online buy-and-sell marketplace</li>
+            <li>Implemented user input and validation features</li>
+            <li>Managed product listings and marketplace functionality</li>
+            <li>Integrated database operations with MySQL</li>
+            <li>Developed responsive interfaces for a seamless user experience</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">Contract Monthly Claim System – Business Management Application</span>
+        </div>
+        <div class="project-tech"><strong>Technologies:</strong> C#, SQL, Visual Studio</div>
+        <div class="project-desc">
+          <ul>
+            <li>Created forms for data capture and processing of monthly claim records</li>
+            <li>Implemented validation logic to ensure data accuracy</li>
+            <li>Managed database interactions for claims data</li>
+            <li>Improved data accuracy and workflow efficiency</li>
+            <li>Developed solutions tailored to business process requirements</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">SmartConnect Legal – Legal Services Marketplace Platform</span>
+          <span class="project-meta">(In Development)</span>
+        </div>
+        <div class="project-tech"><strong>Technologies:</strong> C#, SQL, Git, Database Design</div>
+        <div class="project-desc">
+          <ul>
+            <li>Designing the system architecture for a client-to-lawyer connection platform</li>
+            <li>Developing application functionality for searchable lawyer profiles and service management</li>
+            <li>Creating and managing database structures to support platform features</li>
+            <li>Implementing user management features for clients and legal professionals</li>
+            <li>Building solutions for real-world legal service access challenges across South Africa</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <div class="education-item">
+        <div class="edu-row">
+          <span>Diploma in Information Technology (Software Development)</span>
+          <span>Expected: 2027</span>
+        </div>
+        <div class="edu-detail"><strong>Institution:</strong> Rosebank College</div>
+        <div class="edu-detail"><strong>Status:</strong> Third-Year Student</div>
+        <div class="edu-detail"><strong>Coursework:</strong> Software Development, Advanced Database, Web Development (Intermediate), Systems Analysis & Design, Work Integrated Learning</div>
+      </div>
+    </section>
+
+    <!-- LANGUAGES & ADDITIONAL -->
+    <section>
+      <div class="two-col">
+        <div>
+          <h2>Languages</h2>
+          <ul style="list-style: none; font-size: 12px; color: #333;">
+            <li style="margin-bottom: 8px;">• Tshivenda (Home Language)</li>
+            <li>• English (Professional Working Proficiency)</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Additional Info</h2>
+          <ul style="list-style: none; font-size: 12px; color: #333;">
+            <li style="margin-bottom: 8px;">• Code 10 Driver's Licence</li>
+            <li style="margin-bottom: 8px;">• Active GitHub developer</li>
+            <li>• Committed to continuous learning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Auto-trigger download if accessed from download link
+    window.addEventListener('load', () => {
+      // Optional: Uncomment to auto-download
+      // const filename = 'Mpho_Nethomboni_CV.pdf';
+      // window.print(); // Users can save as PDF
+    });
+  </script>
+</body>
+</html>

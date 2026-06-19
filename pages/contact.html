@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – codewithmpho.dev</title>
+  <meta name="description" content="Get in touch with Mpho. Let's build something amazing together." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar dark" id="navbar">
+  <a href="../index.html" class="navbar-logo"><span>&lt;/</span>codewithmpho.dev<span>&gt;</span></a>
+  <ul class="navbar-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="navbar-cta">
+    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">☀️</button>
+  </div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu">
+  <a href="../index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <span class="section-label">Get In Touch</span>
+    <h1>Let's build something <span class="italic-gold">amazing</span> together.</h1>
+    <p>Have a project in mind or just want to say hello? I'd love to hear from you. Let's discuss how we can bring your ideas to life.</p>
+    <a href="#contact-form" class="btn btn-primary">Let's Work Together →</a>
+    <div style="margin-top:20px;display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(245,240,232,0.45);">
+      ⏰ Usually replies within 24 hours
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section contact-section" id="contact-form">
+  <div class="contact-section-inner container">
+
+    <!-- Form Column -->
+    <div class="contact-form-col animate-on-scroll">
+      <h3>Send Me a Message</h3>
+      <h2>Tell me about your project</h2>
+      <p>Fill out the form and I'll get back to you as soon as possible.</p>
+
+      <form id="contact-form-el" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <span class="form-icon">👤</span>
+            <input type="text" class="form-control" placeholder="Your Name" name="name" required />
+          </div>
+          <div class="form-group">
+            <span class="form-icon">✉️</span>
+            <input type="email" class="form-control" placeholder="Your Email" name="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <span class="form-icon">📋</span>
+          <input type="text" class="form-control" placeholder="Subject" name="subject" required />
+        </div>
+        <div class="form-group">
+          <span class="form-icon" style="top:18px;transform:none;">✏️</span>
+          <textarea class="form-control" placeholder="Tell me about your project..." name="message" rows="6" required></textarea>
+        </div>
+        <div id="form-success" style="display:none;padding:14px 18px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);border-radius:10px;color:#16a34a;font-size:0.875rem;margin-bottom:16px;">
+          ✅ Your message has been sent! I'll get back to you within 24 hours.
+        </div>
+        <div id="form-error" style="display:none;padding:14px 18px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:10px;color:#dc2626;font-size:0.875rem;margin-bottom:16px;">
+          ❌ Something went wrong. Please try again or email me directly.
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px 24px;font-size:0.95rem;" id="submit-btn">
+          Send Message →
+        </button>
+        <div class="form-privacy">Your information is safe with me. I'll never share it.</div>
+      </form>
+    </div>
+
+    <!-- Info Column -->
+    <div class="contact-info-col animate-on-scroll animate-delay-2">
+      <h3>Other Ways to Connect</h3>
+      <div class="contact-info-cards">
+
+        <!-- Email -->
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📧</div>
+          <div class="contact-info-text">
+            <h4>Email</h4>
+            <p><a href="mailto:officialcodewithmpho@gmail.com">officialcodewithmpho@gmail.com</a></p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">I'll get back to you via email.</p>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/27671112527?text=Hi%20Mpho%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+           target="_blank" rel="noopener noreferrer"
+           class="contact-info-card whatsapp-card"
+           aria-label="Open WhatsApp chat with Mpho">
+          <div class="contact-info-icon">📞</div>
+          <div class="contact-info-text">
+            <h4>Phone / WhatsApp</h4>
+            <p style="font-weight:600;color:var(--text-primary);">+27 67 111 2527</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">Available Mon – Fri, 9am – 6pm SAST</p>
+          </div>
+          <span class="contact-info-arrow whatsapp-arrow">→</span>
+        </a>
+
+        <!-- Location -->
+        <a href="https://maps.google.com/?q=Johannesburg,South+Africa"
+           target="_blank" rel="noopener noreferrer"
+           class="contact-info-card location-card"
+           aria-label="Open Johannesburg, South Africa in Google Maps">
+          <div class="contact-info-icon">📍</div>
+          <div class="contact-info-text">
+            <h4>Location</h4>
+            <p style="font-weight:600;color:var(--text-primary);">Johannesburg, South Africa</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">Available for remote work worldwide</p>
+          </div>
+          <span class="contact-info-arrow location-arrow">→</span>
+        </a>
+
+        <!-- Schedule Call -->
+        <div class="contact-info-card schedule-card"
+             role="button" tabindex="0"
+             aria-label="Book a free 15-minute discovery call"
+             id="open-schedule-modal">
+          <div class="contact-info-icon">📅</div>
+          <div class="contact-info-text">
+            <h4>Schedule a Call</h4>
+            <p style="font-weight:600;color:var(--text-primary);">Book a free discovery call</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">15-min call to discuss your project.</p>
+          </div>
+          <span class="contact-info-arrow schedule-arrow">→</span>
+        </div>
+
+      </div>
+
+      <!-- Embedded Map -->
+      <section id="map-container" class="contact-map" aria-label="Interactive map showing Johannesburg, South Africa">
+        <iframe
+          title="Map showing CodeWithMpho location"
+          src="https://www.google.com/maps?q=Johannesburg,South+Africa&output=embed"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Interactive map showing Johannesburg, South Africa"
+          tabindex="0"
+        ></iframe>
+        <a href="https://maps.google.com/?q=Johannesburg,South+Africa"
+           target="_blank" rel="noopener noreferrer"
+           class="directions-btn"
+           aria-label="Get directions to Johannesburg, South Africa">
+          Get Directions →
+        </a>
+      </section>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SCHEDULE MODAL
+═══════════════════════════════════════════════ -->
+<div id="schedule-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" id="close-schedule-modal" aria-label="Close modal">✕</button>
+
+    <!-- Step 1: Date & Time -->
+    <div class="modal-step" id="step-1">
+      <div class="modal-header">
+        <div class="modal-icon">📅</div>
+        <div>
+          <h2 id="modal-title">Book a Discovery Call</h2>
+          <p>15 min · Free · Mon–Fri · SAST</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-field-group">
+          <label for="booking-date">Select Date</label>
+          <input type="date" id="booking-date" class="modal-input" />
+          <span class="modal-hint">Weekdays only (Mon – Fri)</span>
+        </div>
+        <div class="modal-field-group" id="time-slot-group" style="display:none;">
+          <label>Select Time Slot <span style="font-size:0.73rem;color:var(--text-muted);">(SAST)</span></label>
+          <div id="slots-loading" style="display:none;" class="slots-loading">
+            <span class="spinner"></span> Checking availability…
+          </div>
+          <div class="time-slots" id="time-slots"></div>
+          <span class="modal-hint">🌅 Morning 06:00 – 08:00 &nbsp;|&nbsp; 🌙 Evening 19:00 – 23:00</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-full" id="step1-next" disabled>Continue →</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Your Details -->
+    <div class="modal-step" id="step-2" style="display:none;">
+      <div class="modal-header">
+        <button class="modal-back" id="step2-back" aria-label="Go back">←</button>
+        <div class="modal-icon">👤</div>
+        <div>
+          <h2>Your Details</h2>
+          <p id="step2-summary">—</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-field-group">
+          <label for="booking-name">Full Name</label>
+          <input type="text" id="booking-name" class="modal-input" placeholder="Jane Smith" autocomplete="name" />
+        </div>
+        <div class="modal-field-group">
+          <label for="booking-email">Email Address</label>
+          <input type="email" id="booking-email" class="modal-input" placeholder="jane@email.com" autocomplete="email" />
+        </div>
+        <div class="modal-field-group">
+          <label for="booking-project">Project Details <span style="font-size:0.73rem;color:var(--text-muted);">(optional)</span></label>
+          <textarea id="booking-project" class="modal-input modal-textarea" placeholder="Tell me a little about what you'd like to discuss…"></textarea>
+        </div>
+        <div id="booking-error" class="booking-error" style="display:none;"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-full" id="step2-confirm">
+          <span id="confirm-label">Confirm Booking →</span>
+          <span id="confirm-spinner" style="display:none;" class="btn-spinner"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 3: Confirmation -->
+    <div class="modal-step" id="step-3" style="display:none;">
+      <div class="modal-header confirmation-header">
+        <div class="modal-icon success-icon">✅</div>
+        <div>
+          <h2>You're Booked!</h2>
+          <p id="confirmation-text"></p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:20px;">
+          A confirmation email is on its way. Add the call to your calendar:
+        </p>
+        <div class="calendar-buttons">
+          <a id="gcal-link" href="#" target="_blank" rel="noopener noreferrer" class="cal-btn gcal-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.5 3.5h-1V2h-2v1.5h-9V2h-2v1.5H4A2 2 0 0 0 2 5.5v15A2 2 0 0 0 4 22.5h16a2 2 0 0 0 2-2v-15a2 2 0 0 0-2-2zm0 17H4v-11h16v11z"/>
+            </svg>
+            Google Calendar
+          </a>
+          <button id="download-ics" class="cal-btn outlook-btn" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+            </svg>
+            Download .ics
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline btn-full" id="modal-done" type="button">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- WHY + FAQ -->
+<section class="section why-section">
+  <div class="why-section-inner container">
+    <div class="why-left animate-on-scroll">
+      <h3>Why Work With Me?</h3>
+      <h2>Your success is my <span class="italic-gold">priority.</span></h2>
+      <p>I focus on building solutions that are not only beautiful but also effective, user-friendly and designed to help you achieve your goals.</p>
+      <ul class="why-points">
+        <li>Clear communication</li>
+        <li>On-time delivery</li>
+        <li>Clean, scalable code</li>
+        <li>100% satisfaction focus</li>
+      </ul>
+      <div class="signature" style="font-size:1.6rem;">Mpho</div>
+    </div>
+    <div class="animate-on-scroll animate-delay-1">
+      <div class="faq-title">Frequently Asked Questions</div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-header">
+            <div class="faq-icon">⏰</div>
+            <div class="faq-q">
+              <h4>How long does a typical project take?</h4>
+              <p>Project timelines vary depending on the scope and complexity. A small website can take 1–2 weeks, while larger projects may take 4–8 weeks.</p>
+            </div>
+            <span class="faq-toggle">▾</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-icon">🚀</div>
+            <div class="faq-q">
+              <h4>How do we get started?</h4>
+              <p>Simply send me a message through the form. I'll get back to you, learn more about your project and guide you through the next steps.</p>
+            </div>
+            <span class="faq-toggle">▾</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-icon">🌍</div>
+            <div class="faq-q">
+              <h4>Do you work with international clients?</h4>
+              <p>Yes! I work with clients from all over the world. Location is not a barrier. We can collaborate remotely with ease.</p>
+            </div>
+            <span class="faq-toggle">▾</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-icon">❓</div>
+            <div class="faq-q">
+              <h4>What if I'm not sure about my requirements?</h4>
+              <p>No problem! I can help you clarify your ideas and suggest the best solution for your goals and budget.</p>
+            </div>
+            <span class="faq-toggle">▾</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div class="cta-band-left">
+      <div class="cta-band-icon">🚀</div>
+      <div class="cta-band-text">
+        <h3>Ready to bring your idea to life?</h3>
+        <p>I'm excited to hear about your project. Let's create something that makes an impact.</p>
+      </div>
+    </div>
+    <a href="#contact-form" class="btn btn-primary">Let's Work Together →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo"><span>&lt;/</span>codewithmpho.dev<span>&gt;</span></div>
+        <p>Building beautiful, functional digital experiences that make an impact.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Web Development</a></li>
+          <li><a href="services.html">Mobile Apps</a></li>
+          <li><a href="services.html">UI/UX Design</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:officialcodewithmpho@gmail.com">officialcodewithmpho@gmail.com</a></li>
+          <li><a href="tel:+27671112527">+27 67 111 2527</a></li>
+          <li><a href="contact.html">Get In Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 codewithmpho.dev. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+// ═══════════════════════════════════════════════════════════════
+// CONFIG – replace with your real Supabase project values
+// or use the Netlify Function API endpoints (recommended)
+// ═══════════════════════════════════════════════════════════════
+const API = {
+  getBookings:   '/.netlify/functions/get-bookings',
+  createBooking: '/.netlify/functions/create-booking',
+};
+
+// ─────────────────────────────────────────────────────────────
+// CONTACT FORM
+// ─────────────────────────────────────────────────────────────
+document.getElementById('contact-form-el').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn     = document.getElementById('submit-btn');
+  const success = document.getElementById('form-success');
+  const error   = document.getElementById('form-error');
+
+  const name    = this.name.value.trim();
+  const email   = this.email.value.trim();
+  const subject = this.subject.value.trim();
+  const message = this.message.value.trim();
+
+  if (!name || !email || !subject || !message) {
+    error.textContent = '❌ Please fill in all fields.';
+    error.style.display = 'block';
+    success.style.display = 'none';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    error.textContent = '❌ Please enter a valid email address.';
+    error.style.display = 'block';
+    success.style.display = 'none';
+    return;
+  }
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  error.style.display = 'none';
+
+  try {
+    const res = await fetch('/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, subject, message }),
+    });
+    if (res.ok) {
+      success.style.display = 'block';
+      this.reset();
+    } else {
+      throw new Error('Server error');
+    }
+  } catch {
+    error.textContent = '❌ Something went wrong. Please email me directly at officialcodewithmpho@gmail.com';
+    error.style.display = 'block';
+  } finally {
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+  }
+});
+
+// ─────────────────────────────────────────────────────────────
+// MODAL – helpers
+// ─────────────────────────────────────────────────────────────
+const modal    = document.getElementById('schedule-modal');
+const openBtn  = document.getElementById('open-schedule-modal');
+const closeBtn = document.getElementById('close-schedule-modal');
+const doneBtn  = document.getElementById('modal-done');
+const steps    = [
+  document.getElementById('step-1'),
+  document.getElementById('step-2'),
+  document.getElementById('step-3'),
+];
+
+let selectedDate = null;
+let selectedTime = null;
+let bookingPayload = {};
+
+function showStep(n) {
+  steps.forEach((s, i) => s.style.display = (i + 1 === n) ? 'block' : 'none');
+}
+
+function openModal() {
+  modal.setAttribute('aria-hidden', 'false');
+  modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  resetModal();
+  showStep(1);
+  setTimeout(() => closeBtn.focus(), 100);
+}
+
+function closeModal() {
+  modal.setAttribute('aria-hidden', 'true');
+  modal.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+function resetModal() {
+  document.getElementById('booking-date').value = '';
+  document.getElementById('time-slot-group').style.display = 'none';
+  document.getElementById('time-slots').innerHTML = '';
+  document.getElementById('step1-next').disabled = true;
+  document.getElementById('booking-name').value    = '';
+  document.getElementById('booking-email').value   = '';
+  document.getElementById('booking-project').value = '';
+  document.getElementById('booking-error').style.display = 'none';
+  selectedDate = null;
+  selectedTime = null;
+
+  // Set date input min → next weekday from today
+  const today = new Date();
+  const d = new Date(today);
+  const dow = d.getDay();
+  if (dow === 0) d.setDate(d.getDate() + 1);
+  if (dow === 6) d.setDate(d.getDate() + 2);
+  document.getElementById('booking-date').min = d.toISOString().split('T')[0];
+}
+
+openBtn.addEventListener('click', openModal);
+openBtn.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+});
+closeBtn.addEventListener('click', closeModal);
+doneBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+});
+
+// ─────────────────────────────────────────────────────────────
+// DATE PICKER
+// ─────────────────────────────────────────────────────────────
+document.getElementById('booking-date').addEventListener('change', async function () {
+  const dateVal = this.value;
+  if (!dateVal) return;
+
+  const d = new Date(dateVal + 'T00:00:00');
+  const dow = d.getDay();
+  if (dow === 0 || dow === 6) {
+    this.setCustomValidity('Weekdays only (Mon – Fri).');
+    this.reportValidity();
+    document.getElementById('time-slot-group').style.display = 'none';
+    return;
+  }
+  this.setCustomValidity('');
+  selectedDate = dateVal;
+
+  // Show loading
+  document.getElementById('time-slot-group').style.display = 'block';
+  document.getElementById('slots-loading').style.display   = 'flex';
+  document.getElementById('time-slots').innerHTML          = '';
+  document.getElementById('step1-next').disabled           = true;
+  selectedTime = null;
+
+  try {
+    const res      = await fetch(`${API.getBookings}?date=${dateVal}`);
+    const json     = await res.json();
+    const booked   = json.bookedSlots || [];
+    renderSlots(booked);
+  } catch {
+    document.getElementById('time-slots').innerHTML =
+      '<p style="color:#dc2626;font-size:0.83rem;">Could not load availability. Please try again.</p>';
+  } finally {
+    document.getElementById('slots-loading').style.display = 'none';
+  }
+});
+
+// ─────────────────────────────────────────────────────────────
+// SLOT RENDERER
+// ─────────────────────────────────────────────────────────────
+function genSlots(startH, endH) {
+  const slots = [];
+  for (let h = startH; h < endH; h++) {
+    for (let m = 0; m < 60; m += 15) {
+      slots.push(`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`);
+    }
+  }
+  return slots;
+}
+
+function renderSlots(booked) {
+  const container = document.getElementById('time-slots');
+  container.innerHTML = '';
+  const morning = genSlots(6, 8);
+  const evening = genSlots(19, 23);
+
+  const makeGroup = (label, slots) => {
+    const groupLabel = document.createElement('div');
+    groupLabel.className = 'slot-group-label';
+    groupLabel.textContent = label;
+    container.appendChild(groupLabel);
+
+    const grid = document.createElement('div');
+    grid.className = 'slot-grid';
+
+    slots.forEach(t => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'time-slot';
+      const isBooked = booked.includes(t);
+
+      if (isBooked) {
+        btn.classList.add('booked');
+        btn.disabled = true;
+        btn.setAttribute('aria-label', `${t} – Booked`);
+        btn.innerHTML = `<span>${t}</span><span class="booked-label">Booked</span>`;
+      } else {
+        btn.textContent = t;
+        btn.setAttribute('aria-label', `Select ${t} SAST`);
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.time-slot.selected').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          selectedTime = t;
+          document.getElementById('step1-next').disabled = false;
+        });
+      }
+      grid.appendChild(btn);
+    });
+    container.appendChild(grid);
+  };
+
+  makeGroup('🌅 Morning', morning);
+  makeGroup('🌙 Evening', evening);
+}
+
+// ─────────────────────────────────────────────────────────────
+// STEP NAVIGATION
+// ─────────────────────────────────────────────────────────────
+const DAY_NAMES   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function prettyDate(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return `${DAY_NAMES[d.getDay()]}, ${d.getDate()} ${MONTH_NAMES[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+document.getElementById('step1-next').addEventListener('click', () => {
+  if (!selectedTime) return;
+  document.getElementById('step2-summary').textContent =
+    `${prettyDate(selectedDate)} · ${selectedTime} SAST`;
+  showStep(2);
+  document.getElementById('booking-name').focus();
+});
+
+document.getElementById('step2-back').addEventListener('click', () => showStep(1));
+
+// ─────────────────────────────────────────────────────────────
+// CONFIRM BOOKING – hits the Netlify Function
+// ─────────────────────────────────────────────────────────────
+document.getElementById('step2-confirm').addEventListener('click', async () => {
+  const name    = document.getElementById('booking-name').value.trim();
+  const email   = document.getElementById('booking-email').value.trim();
+  const project = document.getElementById('booking-project').value.trim();
+  const errEl   = document.getElementById('booking-error');
+
+  errEl.style.display = 'none';
+
+  if (!name || !email) {
+    errEl.textContent = '❌ Please enter your name and email.';
+    errEl.style.display = 'block';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = '❌ Please enter a valid email address.';
+    errEl.style.display = 'block';
+    return;
+  }
+
+  // Show spinner
+  document.getElementById('confirm-label').style.display  = 'none';
+  document.getElementById('confirm-spinner').style.display = 'inline-block';
+  document.getElementById('step2-confirm').disabled        = true;
+
+  try {
+    const res  = await fetch(API.createBooking, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        email,
+        projectDetails:  project,
+        appointmentDate: selectedDate,
+        appointmentTime: selectedTime,
+      }),
+    });
+
+    const json = await res.json();
+
+    if (!res.ok || !json.success) {
+      errEl.textContent = `❌ ${json.message || 'Booking failed. Please try again.'}`;
+      errEl.style.display = 'block';
+      return;
+    }
+
+    // Success – save for confirmation screen
+    bookingPayload = { name, email, project };
+    buildConfirmation();
+    showStep(3);
+
+  } catch {
+    errEl.textContent = '❌ Network error. Please check your connection and try again.';
+    errEl.style.display = 'block';
+  } finally {
+    document.getElementById('confirm-label').style.display  = 'inline';
+    document.getElementById('confirm-spinner').style.display = 'none';
+    document.getElementById('step2-confirm').disabled        = false;
+  }
+});
+
+// ─────────────────────────────────────────────────────────────
+// CONFIRMATION SCREEN
+// ─────────────────────────────────────────────────────────────
+function buildConfirmation() {
+  const pretty = prettyDate(selectedDate);
+  document.getElementById('confirmation-text').textContent =
+    `${pretty} at ${selectedTime} SAST`;
+
+  // Google Calendar link
+  const [hh, mm] = selectedTime.split(':').map(Number);
+  const startDt  = new Date(`${selectedDate}T${selectedTime}:00`);
+  const endDt    = new Date(startDt.getTime() + 15 * 60000);
+  const fmt = dt => dt.toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z';
+
+  const gcal = new URL('https://calendar.google.com/calendar/render');
+  gcal.searchParams.set('action',  'TEMPLATE');
+  gcal.searchParams.set('text',    'Discovery Call with Mpho');
+  gcal.searchParams.set('dates',   `${fmt(startDt)}/${fmt(endDt)}`);
+  gcal.searchParams.set('details', `Project notes: ${bookingPayload.project || 'Not specified'}\n\nContact: officialcodewithmpho@gmail.com`);
+  gcal.searchParams.set('ctz',     'Africa/Johannesburg');
+  document.getElementById('gcal-link').href = gcal.toString();
+
+  // .ics download
+  document.getElementById('download-ics').onclick = () => {
+    const endMm   = String((mm + 15) % 60).padStart(2, '0');
+    const endHh   = String(hh + (mm + 15 >= 60 ? 1 : 0)).padStart(2, '0');
+    const dateKey = selectedDate.replace(/-/g, '');
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//codewithmpho.dev//Discovery Call//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VTIMEZONE',
+      'TZID:Africa/Johannesburg',
+      'BEGIN:STANDARD',
+      'DTSTART:19700101T020000',
+      'TZOFFSETFROM:+0200',
+      'TZOFFSETTO:+0200',
+      'TZNAME:SAST',
+      'END:STANDARD',
+      'END:VTIMEZONE',
+      'BEGIN:VEVENT',
+      `DTSTART;TZID=Africa/Johannesburg:${dateKey}T${selectedTime.replace(':','')}00`,
+      `DTEND;TZID=Africa/Johannesburg:${dateKey}T${endHh}${endMm}00`,
+      'SUMMARY:Discovery Call with Mpho',
+      `DESCRIPTION:15-minute free discovery call.\\nProject: ${(bookingPayload.project || 'Not specified').replace(/\n/g,'\\n')}`,
+      `ORGANIZER;CN=Mpho Nethomboni:mailto:officialcodewithmpho@gmail.com`,
+      `ATTENDEE;CN=${bookingPayload.name}:mailto:${bookingPayload.email}`,
+      'LOCATION:Google Meet / WhatsApp Call',
+      'STATUS:CONFIRMED',
+      'END:VEVENT',
+      'END:VCALENDAR',
+    ].join('\r\n');
+
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url;
+    a.download = `discovery-call-mpho-${selectedDate}.ics`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+}
+</script>
+</body>
+</html>

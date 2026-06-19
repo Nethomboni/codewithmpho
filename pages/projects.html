@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – codewithmpho.dev</title>
+  <meta name="description" content="Explore my portfolio of web, mobile and desktop projects built with passion and purpose." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar dark" id="navbar">
+  <a href="../index.html" class="navbar-logo"><span>&lt;/</span>codewithmpho.dev<span>&gt;</span></a>
+  <ul class="navbar-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="navbar-cta">
+    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">☀️</button>
+  </div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu">
+  <a href="../index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html" class="active">Projects</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <span class="section-label">My Work</span>
+    <h1>Things I've built with <span class="italic-gold">passion</span> &amp; <span class="italic-gold">purpose.</span></h1>
+    <p>Each project represents a challenge, a solution and a step forward in my journey as a developer and designer.</p>
+  </div>
+</section>
+
+<!-- FILTER TABS -->
+<div class="projects-filter">
+  <div class="projects-filter-inner">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">🔲 All Projects</button>
+      <button class="filter-tab" data-filter="websites">🖥️ Websites</button>
+      <button class="filter-tab" data-filter="mobile">📱 Mobile Apps</button>
+      <button class="filter-tab" data-filter="desktop">🖱️ Desktop Apps</button>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS GRID -->
+<section class="section projects-grid-section">
+  <div id="projects-grid" class="projects-grid container">
+    <!-- Dynamically rendered by projects.js -->
+    <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text-muted);">Loading projects...</div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="project-modal"></div>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div class="cta-band-left">
+      <div class="cta-band-icon">🚀</div>
+      <div class="cta-band-text">
+        <h3>Have an idea in mind?</h3>
+        <p><span class="italic-gold">Let's bring it to life.</span> I'm always open to discussing new projects and helping bring creative ideas to reality.</p>
+      </div>
+    </div>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo"><span>&lt;/</span>codewithmpho.dev<span>&gt;</span></div>
+        <p>Building beautiful, functional digital experiences that make an impact.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Web Development</a></li>
+          <li><a href="services.html">Mobile Apps</a></li>
+          <li><a href="services.html">UI/UX Design</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@codewithmpho.com">hello@codewithmpho.com</a></li>
+          <li><a href="tel:+27711234567">+27 71 123 4567</a></li>
+          <li><a href="contact.html">Get In Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 codewithmpho.dev. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/projects.js"></script>
+</body>
+</html>

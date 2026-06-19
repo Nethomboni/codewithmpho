@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>codewithmpho.dev – Software Developer & Web Designer</title>
+  <meta name="description" content="I build websites that are fast, beautiful and built to convert. Software Developer & Web Designer based in South Africa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar dark" id="navbar">
+  <a href="index.html" class="navbar-logo"><span>&lt;/</span>codewithmpho.dev<span>&gt;</span></a>
+
+  <ul class="navbar-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/about.html">About</a></li>
+    <li><a href="pages/projects.html">Projects</a></li>
+    <li><a href="pages/services.html">Services</a></li>
+    <li><a href="pages/pricing.html">Pricing</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+  </ul>
+
+  <div class="navbar-cta">
+    <a href="pages/contact.html" class="btn btn-primary">Let's Work Together →</a>
+    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">☀️</button>
+  </div>
+
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html" class="active">Home</a>
+  <a href="pages/about.html">About</a>
+  <a href="pages/projects.html">Projects</a>
+  <a href="pages/services.html">Services</a>
+  <a href="pages/pricing.html">Pricing</a>
+  <a href="pages/contact.html">Contact</a>
+  <a href="pages/contact.html" class="btn btn-primary">Let's Work Together →</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-img"></div>
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-bg-bottom"></div>
+  </div>
+  <canvas id="particles-canvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;"></canvas>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Software Developer &amp; Web Designer
+    </div>
+
+    <h1>I build websites<br>that are <span class="italic-gold">fast,<br>beautiful</span> &amp;<br>built to convert.</h1>
+
+    <p class="hero-desc">I help brands and businesses turn ideas into modern, high-performing digital experiences.</p>
+
+    <div class="hero-actions">
+      <a href="pages/projects.html" class="btn btn-primary">View My Work →</a>
+      <a href="pages/contact.html" class="btn btn-outline">Let's Talk 💬</a>
+    </div>
+
+    <div class="hero-availability">
+      <span class="hero-availability-dot"></span>
+      Available for new projects
+    </div>
+  </div>
+</section>
+
+<!-- ====== FEATURE STRIP ====== -->
+<div class="feature-strip">
+  <div class="feature-strip-inner">
+    <div class="feature-item animate-on-scroll">
+      <div class="feature-icon">🎨</div>
+      <div class="feature-text">
+        <h4>Modern &amp; Minimal</h4>
+        <p>Clean and elegant designs</p>
+      </div>
+    </div>
+    <div class="feature-item animate-on-scroll animate-delay-1">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-text">
+        <h4>Fast &amp; Optimized</h4>
+        <p>Speed that improves conversions</p>
+      </div>
+    </div>
+    <div class="feature-item animate-on-scroll animate-delay-2">
+      <div class="feature-icon">📱</div>
+      <div class="feature-text">
+        <h4>Mobile First</h4>
+        <p>Looks perfect on all devices</p>
+      </div>
+    </div>
+    <div class="feature-item animate-on-scroll animate-delay-3">
+      <div class="feature-icon">🎧</div>
+      <div class="feature-text">
+        <h4>Reliable Support</h4>
+        <p>I'm here when you need me</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== ABOUT PREVIEW ====== -->
+<section class="section about-preview">
+  <div class="about-preview-inner container">
+    <div class="about-preview-text animate-on-scroll">
+      <span class="section-label">About Me</span>
+      <h2>Passionate about building digital <span class="italic-gold">products</span>.</h2>
+      <p>I'm a software developer and web designer who loves creating elegant, functional and user-focused websites. Clean code. Modern design. Real results.</p>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <h3>3+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <h3>10+</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-item">
+          <h3>3+</h3>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+
+      <a href="pages/about.html" class="btn btn-outline-dark">More About Me →</a>
+    </div>
+
+    <div class="about-preview-visual animate-on-scroll animate-delay-2">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder"><img src="assets/images/mpho.jpeg" alt="Image of myself" /></div>
+      </div>
+      <div class="about-quote-card">
+        <div class="quote-icon">"</div>
+        <p>My goal is simple: build solutions that make an impact.</p>
+        <cite>– Mpho</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICES PREVIEW ====== -->
+<section class="section services-preview">
+  <div class="services-preview-inner container">
+    <span class="section-label animate-on-scroll">What I Do</span>
+    <h2 class="animate-on-scroll" style="font-size:clamp(1.7rem,2.5vw,2.2rem);color:var(--text-primary);margin-top:4px;">Services I provide</h2>
+
+    <div class="services-grid">
+      <div class="service-card animate-on-scroll">
+        <div class="service-card-icon">🖥️</div>
+        <h3>Web Design</h3>
+        <p>Beautiful, modern and user-friendly designs that bring your brand to life.</p>
+      </div>
+      <div class="service-card animate-on-scroll animate-delay-1">
+        <div class="service-card-icon">&lt;/&gt;</div>
+        <h3>Web Development</h3>
+        <p>High-performance websites built with clean, efficient and scalable code.</p>
+      </div>
+      <div class="service-card animate-on-scroll animate-delay-2">
+        <div class="service-card-icon">📱</div>
+        <h3>Responsive Design</h3>
+        <p>Mobile-first approach ensuring your site looks perfect on any device.</p>
+      </div>
+      <div class="service-card animate-on-scroll animate-delay-3">
+        <div class="service-card-icon">🚀</div>
+        <h3>Performance Optimization</h3>
+        <p>Speed, SEO and performance improvements for better user experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FEATURED PROJECTS ====== -->
+<section class="section featured-projects">
+  <div class="featured-projects-inner container">
+    <div class="section-header-row animate-on-scroll">
+      <div>
+        <span class="section-label">Featured Projects</span>
+        <h2>Some of my recent work</h2>
+      </div>
+      <a href="pages/projects.html" class="view-all-link">View All Projects →</a>
+    </div>
+
+    <div class="projects-grid-home">
+      <div class="project-card-home animate-on-scroll" onclick="window.location.href='pages/projects.html'">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">
+            <img src="assets/images/Pastimes/home-page.png" alt="Pastimes E-Commerce Website" />
+          </div>
+        </div>
+        <div class="project-card-info">
+          <div>
+            <h4>Pastimes</h4>
+            <span>E-Commerce Website</span>
+          </div>
+          <div class="project-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="project-card-home animate-on-scroll animate-delay-1" onclick="window.location.href='pages/projects.html'">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">
+            <img src="assets/images/Harvest printing centre/harvest-pinting-centre.png" alt="Harvest Printing Website" />
+          </div>
+        </div>
+        <div class="project-card-info">
+          <div>
+            <h4>Harvest Printing Centre</h4>
+            <span>Business Website</span>
+          </div>
+          <div class="project-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="project-card-home animate-on-scroll animate-delay-2" onclick="window.location.href='pages/projects.html'">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">
+            <img src="assets/images/Mali Budget/Logo.jpeg" alt="Mali Budget Mobile App" />
+          </div>
+        </div>
+        <div class="project-card-info">
+          <div>
+            <h4>Mali Budget</h4>
+            <span>Mobile App</span>
+          </div>
+          <div class="project-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA BAND ====== -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div class="cta-band-left">
+      <div class="cta-band-icon">✈️</div>
+      <div class="cta-band-text">
+        <h3>Have a project in mind?</h3>
+        <p>Let's build something amazing together.</p>
+      </div>
+    </div>
+    <a href="pages/contact.html" class="btn btn-primary">Let's Work Together →</a>
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo"><span>&lt;/</span>codewithmpho.dev<span>&gt;</span></div>
+        <p>Building beautiful, functional digital experiences that make an impact.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/projects.html">Projects</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="pages/services.html">Web Development</a></li>
+          <li><a href="pages/services.html">Mobile Apps</a></li>
+          <li><a href="pages/services.html">UI/UX Design</a></li>
+          <li><a href="pages/pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:officialcodewithmpho@gmail.com">officialcodewithmpho@gmail.com</a></li>
+          <li><a href="tel:+27671112527">+27 67 111 2527</a></li>
+          <li><a href="pages/contact.html">Get In Touch</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 codewithmpho.dev. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="pages/privacy-policy.html">Privacy Policy</a>
+        <a href="pages/terms-and-conditions.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
