@@ -42,7 +42,7 @@ function buildOwnerEmail({ name, email, appointmentDate, appointmentTime, projec
   const pretty = prettyDate(appointmentDate);
   return {
     from: `"CodeWithMpho Portfolio" <${process.env.SMTP_USER}>`,
-    to:   process.env.CONTACT_EMAIL || 'officialcodewithmpho@gmail.com',
+    to:   process.env.CONTACT_EMAIL,
     subject: `📅 New Discovery Call Booking – ${pretty} at ${appointmentTime} SAST`,
     html: `
       <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#f9f7f4;padding:32px;border-radius:12px;">
