@@ -178,7 +178,7 @@ export default async function handler(req, res) {
     }
   } catch (err) {
     console.error('check-booking error:', err);
-    return res.status(500).json({ success: false, message: 'Could not verify slot availability. Please try again.' });
+    return res.status(500).json({ success: false, message: 'Could not verify slot availability. Please try again later.' });
   }
 
   // ── Insert ────────────────────────────────────────────────────────────────────
