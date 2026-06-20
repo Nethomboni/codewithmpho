@@ -414,6 +414,7 @@
 const API = {
   getBookings:   '/api/get-bookings',
   createBooking: '/api/create-booking',
+  sendContact:   '/api/send-contact',
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -448,17 +449,22 @@ document.getElementById('contact-form-el').addEventListener('submit', async func
   error.style.display = 'none';
 
   try {
-    const res = await fetch('/api/create-booking', {
+    const res  = await fetch(API.sendContact, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, subject, message }),
     });
-    if (res.ok) {
-      success.style.display = 'block';
-      this.reset();
-    } else {
-      throw new Error('Server error');
+    const json = await res.json().catch(() => ({}));
+
+    if (!res.ok || !json.success) {
+      error.textContent = `❌ ${json.message || 'Something went wrong. Please email me directly at officialcodewithmpho@gmail.com'}`;
+      error.style.display = 'block';
+      success.style.display = 'none';
+      return;
     }
+
+    success.style.display = 'block';
+    this.reset();
   } catch {
     error.textContent = '❌ Something went wrong. Please email me directly at officialcodewithmpho@gmail.com';
     error.style.display = 'block';
