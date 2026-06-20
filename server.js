@@ -3,9 +3,9 @@
 // Node.js + Express contact form handler
 // ============================================
 
-const express = require('express');
-const path = require('path');
-const nodemailer = require('nodemailer');
+import express from 'express';
+import cors from 'cors';
+import nodemailer from 'nodemailer';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -149,4 +149,4 @@ app.listen(PORT, () => {
   console.log(`✅ CodeWithMpho Portfolio running at http://localhost:${PORT}`);
 });
 
-module.exports = app;
+export default app;
