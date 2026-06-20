@@ -1625,12 +1625,6 @@ a.contact-info-card {
   box-shadow: 0 2px 10px rgba(201, 146, 42, 0.35);
 }
 
-.time-slot.booked {
-  opacity: 0.35;
-  cursor: not-allowed;
-  text-decoration: line-through;
-}
-
 .modal-footer {
   padding: 0 28px 28px;
 }
