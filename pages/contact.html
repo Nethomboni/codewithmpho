@@ -448,7 +448,7 @@ document.getElementById('contact-form-el').addEventListener('submit', async func
   error.style.display = 'none';
 
   try {
-    const res = await fetch('/send-email', {
+    const res = await fetch('/api/create-booking', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, subject, message }),
