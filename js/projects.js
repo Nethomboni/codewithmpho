@@ -144,7 +144,6 @@ const PROJECTS = [
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects('all');
   initFilter();
-  initModal();
 });
 
 function renderProjects(filter) {
@@ -166,7 +165,7 @@ function renderProjects(filter) {
       : `<div class="project-thumb-placeholder">Project Preview</div>`;
 
     return `
-      <div class="project-card animate-on-scroll" data-id="${p.id}" onclick="openModal('${p.id}')">
+      <a class="project-card animate-on-scroll" data-id="${p.id}" href="${p.github}" target="_blank" rel="noopener noreferrer">
         <div class="project-card-thumb">
           ${thumbHTML}
         </div>
@@ -178,11 +177,11 @@ function renderProjects(filter) {
             ${p.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
           </div>
           <div class="project-view-btn">
-            <span>🔒 View Project</span>
+            <span>View on GitHub</span>
             <span>→</span>
           </div>
         </div>
-      </div>`;
+      </a>`;
   }).join('');
 
   // Re-initialise scroll animations on newly injected cards
@@ -215,170 +214,3 @@ function initFilter() {
   });
 }
 
-// ============================================
-// MODAL INIT
-// ============================================
-
-function initModal() {
-  const overlay = document.getElementById('project-modal');
-  if (!overlay) return;
-
-  // Close on backdrop click
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeModal();
-  });
-
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
-}
-
-// ============================================
-// OPEN MODAL
-// ============================================
-
-function openModal(id) {
-  const project = PROJECTS.find(p => p.id === id);
-  if (!project) return;
-
-  const overlay = document.getElementById('project-modal');
-  if (!overlay) return;
-
-  // ---- Modal hero image ----
-  const heroHTML = project.thumbnail
-    ? `<img
-         class="modal-hero-img"
-         src="${project.thumbnail}"
-         alt="${project.title} – hero screenshot"
-         loading="eager"
-         onerror="
-           this.style.display='none';
-           this.nextElementSibling.style.display='flex';
-         "
-       />
-       <div class="modal-hero-placeholder" style="display:none;">Project Screenshot</div>`
-    : `<div class="modal-hero-placeholder">Project Screenshot</div>`;
-
-  // ---- Screenshots ----
-  let screenshotsHTML = '';
-
-  if (Array.isArray(project.screenshots) && project.screenshots.length) {
-    // First image is the featured (full-width) screenshot
-    const [featured, ...rest] = project.screenshots;
-
-    const featuredHTML = `
-      <div class="screenshot-item featured">
-        <img
-          src="${featured}"
-          alt="${project.title} – featured screenshot"
-          loading="lazy"
-          onerror="
-            this.style.display='none';
-            this.parentElement.classList.add('screenshot-broken');
-            this.parentElement.insertAdjacentHTML('beforeend',
-              '<span class=\\'screenshot-placeholder\\'>Image unavailable</span>');
-          "
-        />
-      </div>`;
-
-    const restHTML = rest.map((src, i) => {
-      // Derive a human-readable label from the filename
-      const label = src
-        .split('/').pop()           // grab filename
-        .replace(/\.\w+$/, '')      // strip extension
-        .replace(/[-_]/g, ' ');     // dashes/underscores → spaces
-
-      return `
-        <div class="screenshot-item">
-          <img
-            src="${src}"
-            alt="${project.title} – ${label}"
-            loading="lazy"
-            onerror="
-              this.style.display='none';
-              this.parentElement.classList.add('screenshot-broken');
-              this.parentElement.insertAdjacentHTML('beforeend',
-                '<span class=\\'screenshot-placeholder\\'>${label}</span>');
-            "
-          />
-        </div>`;
-    }).join('');
-
-    screenshotsHTML = featuredHTML + restHTML;
-
-  } else if (typeof project.screenshots === 'number') {
-    // Numeric fallback — plain placeholder tiles
-    screenshotsHTML = Array.from({ length: project.screenshots }, (_, i) =>
-      `<div class="screenshot-item">
-         <div class="screenshot-placeholder">Screenshot ${i + 1}</div>
-       </div>`
-    ).join('');
-  }
-
-  // ---- Build modal HTML ----
-  overlay.innerHTML = `
-    <div class="modal-container">
-      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
-
-      <div class="modal-hero">
-        ${heroHTML}
-      </div>
-
-      <div class="modal-body">
-        <p class="modal-type">${project.type}</p>
-        <h2>${project.title}</h2>
-        <p>${project.full}</p>
-
-        <div class="modal-grid">
-          <div class="modal-section">
-            <h4>Features</h4>
-            <ul>${project.features.map(f => `<li>${f}</li>`).join('')}</ul>
-          </div>
-          <div class="modal-section">
-            <h4>Technologies</h4>
-            <ul>${project.tags.map(t => `<li>${t}</li>`).join('')}</ul>
-          </div>
-          <div class="modal-section">
-            <h4>Challenges</h4>
-            <ul>${project.challenges.map(c => `<li>${c}</li>`).join('')}</ul>
-          </div>
-          <div class="modal-section">
-            <h4>Solutions</h4>
-            <ul>${project.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
-          </div>
-        </div>
-
-        <div class="modal-screenshots">
-          <h4>Screenshots</h4>
-          <div class="screenshots-slider">
-            ${screenshotsHTML}
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <div class="modal-tags">
-            ${project.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
-          </div>
-          <a href="${project.github}" target="_blank" rel="noopener" class="btn btn-primary">
-            View Full Project →
-          </a>
-        </div>
-      </div>
-    </div>`;
-
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-// ============================================
-// CLOSE MODAL
-// ============================================
-
-function closeModal() {
-  const overlay = document.getElementById('project-modal');
-  if (overlay) {
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-}
