@@ -16,14 +16,7 @@ const PROJECTS = [
     features: ['Product catalog & filtering', 'Shopping cart system', 'User authentication', 'Secure checkout flow', 'Admin dashboard', 'Mobile responsive'],
     challenges: ['Building a seamless checkout UX', 'Optimizing image loading performance', 'Implementing secure payment flow'],
     solutions: ['Custom cart logic with localStorage', 'Lazy loading & WebP images', 'PHP backend validation with form tokens'],
-    screenshots: [
-      '../assets/images/Pastimes/home-page.png',
-      '../assets/images/Pastimes/browse-page.png',
-      '../assets/images/Pastimes/view-item.png',
-      '../assets/images/Pastimes/shopping-cart-page.png',
-      '../assets/images/Pastimes/sell-page.png',
-      '../assets/images/Pastimes/login-page.png'
-    ]
+   
   },
   {
     id: 'mali-budget',
