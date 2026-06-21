@@ -32,8 +32,14 @@ export default async function handler(req, res) {
 
     if (error) throw error;
 
+    if (!data) {
+      // Supabase returned no error but also no array — log it so we can see
+      // exactly when/why this happens instead of crashing the request.
+      console.warn('get-bookings: received null data with no error for date', date);
+    }
+
     // Normalise HH:MM:SS → HH:MM
-    const bookedSlots = data.map(row => row.appointment_time.slice(0, 5));
+    const bookedSlots = (data || []).map(row => row.appointment_time.slice(0, 5));
 
     return res.status(200).json({ date, bookedSlots });
   } catch (err) {
