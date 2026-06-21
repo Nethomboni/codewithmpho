@@ -178,12 +178,12 @@ export default async function handler(req, res) {
     }
   } catch (err) {
     console.error('check-booking error:', err);
-    return res.status(500).json({ success: false, message: 'Could not verify slot availability. Please try again later.' });
+    return res.status(500).json({ success: false, message: 'Could not verify slot availability. Please try again.' });
   }
 
   // ── Insert ────────────────────────────────────────────────────────────────────
   try {
-    const { error: insertError } = await supabase
+    const { data: insertData, error: insertError, status } = await supabase
       .from('appointments')
       .insert([{
         name,
@@ -191,7 +191,17 @@ export default async function handler(req, res) {
         project_details:  projectDetails || null,
         appointment_date: appointmentDate,
         appointment_time: appointmentTime + ':00',
-      }]);
+      }])
+      .select();
+
+    // TEMPORARY DEBUG — remove once the null-data mystery is solved.
+    console.log('create-booking DEBUG:', {
+      supabaseUrl: process.env.SUPABASE_URL,
+      anonKeyLength: (process.env.SUPABASE_ANON_KEY || '').length,
+      status,
+      insertedRows: insertData,
+      insertError,
+    });
 
     if (insertError) {
       if (insertError.code === '23505') {
