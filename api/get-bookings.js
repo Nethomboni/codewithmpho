@@ -25,10 +25,22 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { data, error } = await supabase
+    const { data, error, status, count } = await supabase
       .from('appointments')
-      .select('appointment_time')
+      .select('appointment_time', { count: 'exact' })
       .eq('appointment_date', date);
+
+    // TEMPORARY DEBUG — remove once the null-data mystery is solved.
+    console.log('get-bookings DEBUG:', {
+      supabaseUrl: process.env.SUPABASE_URL,
+      anonKeyLength: (process.env.SUPABASE_ANON_KEY || '').length,
+      requestedDate: date,
+      status,
+      count,
+      dataIsNull: data === null,
+      dataIsArray: Array.isArray(data),
+      error,
+    });
 
     if (error) throw error;
 
