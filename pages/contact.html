@@ -505,6 +505,10 @@ function openModal() {
 }
 
 function closeModal() {
+  // Move focus out of the modal BEFORE hiding it from assistive tech —
+  // otherwise a focused descendant (e.g. the close or done button) keeps
+  // focus inside an aria-hidden element, which browsers warn about.
+  openBtn.focus();
   modal.setAttribute('aria-hidden', 'true');
   modal.classList.remove('is-open');
   document.body.style.overflow = '';
