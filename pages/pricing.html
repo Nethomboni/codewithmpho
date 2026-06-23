@@ -575,8 +575,8 @@
         <div class="pricing-icon">&#x1F680;</div>
         <h3>Starter</h3>
         <p class="pricing-subtitle">Perfect for small projects and startups.</p>
-        <div class="pricing-price">R1,500 &ndash; R3,500</div>
-        <div class="pricing-period">One-time payment</div>
+        <div class="pricing-price">R800 &ndash; R1,500</div>
+        <div class="pricing-period">Deposit &ndash; R500</div>
         <div class="pricing-features-title">What&rsquo;s Included</div>
         <ul class="pricing-features-list">
           <li>Up to 5 Pages</li>
@@ -597,8 +597,8 @@
         <div class="pricing-icon">&#11088;</div>
         <h3>Professional</h3>
         <p class="pricing-subtitle">Ideal for growing businesses and brands.</p>
-        <div class="pricing-price">R4,000 &ndash; R7,500</div>
-        <div class="pricing-period">One-time payment</div>
+        <div class="pricing-price">R1,800 &ndash; R2,500</div>
+        <div class="pricing-period">Deposit &ndash; R500</div>
         <div class="pricing-features-title">What&rsquo;s Included</div>
         <ul class="pricing-features-list">
           <li>Up to 10 Pages</li>
@@ -619,8 +619,8 @@
         <div class="pricing-icon">&#x1F48E;</div>
         <h3>Premium</h3>
         <p class="pricing-subtitle">For advanced solutions and scalability.</p>
-        <div class="pricing-price">R8,000+</div>
-        <div class="pricing-period">One-time payment</div>
+        <div class="pricing-price">R3,000 &ndash; R4,000</div>
+        <div class="pricing-period">Deposit &ndash; R500</div>
         <div class="pricing-features-title">What&rsquo;s Included</div>
         <ul class="pricing-features-list">
           <li>Unlimited Pages</li>
@@ -815,7 +815,7 @@ const SLIDES_PER_VIEW = 3;
 
 const PACKAGES = {
   starter: {
-    icon: '🚀', title: 'Starter Package', price: 'R1,500 – R3,500',
+    icon: '🚀', title: 'Starter Package', price: 'R800 – R1,500',
     badge: null, theme: 'starter',
     carouselLabel: '✨ Starter Website Examples',
     description: 'The Starter Package is perfect for individuals, freelancers and small businesses who need a clean, professional online presence. You get a beautifully designed, fully responsive website that looks great on every device — built with solid code and real attention to detail.',
@@ -828,7 +828,7 @@ const PACKAGES = {
     ],
     bestFor: ['Portfolio Sites','Landing Pages','Small Businesses','Freelancers','Event Pages','Startups'],
     expect: 'A clean, modern website that establishes your online presence with confidence. You receive all source files, deployment support, and a walkthrough of how to update your content.',
-    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Starter Website Package* (R1,500 – R3,500).\n\nI would like a clean, modern website with responsive design, a contact form, and basic SEO setup.\n\nPlease send me more details and let\'s discuss my project. 😊',
+    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Starter Website Package* (R800 – R1,500).\n\nI would like a clean, modern website with responsive design, a contact form, and basic SEO setup.\n\nPlease send me more details and let\'s discuss my project. 😊',
     slides: [
       {caption:'Clean agency website', layout:'portfolio', img:'../assets/images/Packages/Starter package/01_agency_starter.jpg'},
       {caption:'Consultant landing page', layout:'landing', img:'../assets/images/Packages/Starter package/02_consultant_starter.jpg'},
@@ -838,7 +838,7 @@ const PACKAGES = {
     ]
   },
   professional: {
-    icon: '⭐', title: 'Professional Package', price: 'R4,000 – R7,500',
+    icon: '⭐', title: 'Professional Package', price: 'R1,800 – R2,500',
     badge: '⭐ Most Popular', theme: 'professional',
     carouselLabel: '✨ Professional Website Examples',
     description: 'Designed for growing businesses and ambitious brands that need a premium, feature-rich website. Expect advanced UI sections, smooth animations, WhatsApp integration, a CMS admin panel so you can update your own content, and a polished multi-page experience that builds real trust with your audience.',
@@ -851,7 +851,7 @@ const PACKAGES = {
     ],
     bestFor: ['Service Businesses','Agencies','Restaurants','Salons & Spas','Professional Firms','Growing Brands'],
     expect: 'A premium, multi-page website with animations, WhatsApp chat integration, and a CMS so you can manage your own content. Full training on how to use the admin panel is included.',
-    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Professional Website Package* (R4,000 – R7,500).\n\nI would like a modern business website with responsive design, smooth animations, WhatsApp integration, and a CMS admin panel.\n\nPlease send me more details so we can discuss my project. 😊',
+    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Professional Website Package* (R1,800 – R2,500).\n\nI would like a modern business website with responsive design, smooth animations, WhatsApp integration, and a CMS admin panel.\n\nPlease send me more details so we can discuss my project. 😊',
     slides: [
       {caption:'Digital agency site', layout:'business', img:'../assets/images/Packages/Professional Package/01_digital_agency_professional.jpg'},
       {caption:'Business consulting firm', layout:'agency', img:'../assets/images/Packages/Professional Package/02_business_consulting_professional.jpg'},
@@ -861,7 +861,7 @@ const PACKAGES = {
     ]
   },
   premium: {
-    icon: '💎', title: 'Premium Package', price: 'R8,000+',
+    icon: '💎', title: 'Premium Package', price: 'R3,000 - R4,000',
     badge: '💎 Premium', theme: 'premium',
     carouselLabel: '✨ Premium & Advanced Examples',
     description: 'The ultimate digital solution for businesses that need advanced functionality, custom systems, and a truly cinematic web experience. From full e-commerce stores and booking systems to custom dashboards and API integrations — this is where ideas become powerful, scalable digital products.',
@@ -874,7 +874,7 @@ const PACKAGES = {
     ],
     bestFor: ['E-Commerce Stores','Web Applications','Booking Platforms','Dashboards','SaaS Products','Cinematic Brands'],
     expect: 'A fully custom, production-ready digital product. You receive comprehensive documentation, full source code ownership, deployment support, and post-launch assistance to ensure everything runs perfectly.',
-    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Premium Website Package* (R8,000+).\n\nI\'m looking for an advanced solution — this could include an e-commerce store, booking system, custom dashboard, or web application with API integrations and premium animations.\n\nPlease send me more details and let\'s set up a call to discuss my project. 😊',
+    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Premium Website Package* (R3,000 - R4,000).\n\nI\'m looking for an advanced solution — this could include an e-commerce store, booking system, custom dashboard, or web application with API integrations and premium animations.\n\nPlease send me more details and let\'s set up a call to discuss my project. 😊',
     slides: [
       {caption:'Full e-commerce platform', layout:'ecomm', img:'../assets/images/Packages/Premium Package/01_ecommerce_dashboard_premium.jpg'},
       {caption:'SaaS dashboard', layout:'booking', img:'../assets/images/Packages/Premium Package/02_saas_dashboard_premium.jpg'},
