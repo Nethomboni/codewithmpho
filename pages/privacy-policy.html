@@ -6,11 +6,11 @@
   <title>Privacy Policy – codewithmpho.dev</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
-  <script defer src="../js/speed-insights.bundle.js"></script>
   <style>
     .legal-hero {
-      background: linear-gradient(135deg, #1a1512 0%, #241e17 100%);
+      background: #17130f;
       padding: 120px 48px 72px;
       border-bottom: 1px solid rgba(201,146,42,0.1);
     }
@@ -50,17 +50,17 @@
       list-style: disc;
     }
 
-    .legal-content a { color: var(--gold); }
+    .legal-content a { color: var(--gold-ink); text-decoration: underline; text-underline-offset: 2px; }
     .legal-updated {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: rgba(201,146,42,0.07);
       border: 1px solid rgba(201,146,42,0.15);
-      border-radius: 8px;
-      padding: 8px 16px;
+      border-radius: 6px;
+      padding: 8px 14px;
       font-size: 0.8rem;
-      color: var(--gold);
+      color: var(--gold-ink);
       margin-bottom: 36px;
     }
 
@@ -75,6 +75,7 @@
   </style>
 </head>
 <body>
+<script src="../js/icons.js"></script>
 
 <!-- NAVBAR -->
 <nav class="navbar light" id="navbar">
@@ -88,21 +89,23 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="navbar-cta">
-    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
-    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">&#9728;&#65039;</button>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
+    <button class="theme-toggle" type="button" aria-label="Go to contact form" title="Contact me"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg></button>
   </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="projects.html">Projects</a>
   <a href="services.html">Services</a>
   <a href="pricing.html">Pricing</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+  <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
 </div>
+
+<main id="main">
 
 <!-- HERO -->
 <div class="legal-hero">
@@ -117,7 +120,7 @@
 <div class="legal-body">
   <div class="legal-content">
 
-    <div class="legal-updated">📅 Last updated: May 2026</div>
+    <div class="legal-updated"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Last updated: May 2026</div>
 
     <h2>1. Introduction</h2>
     <p>Welcome to codewithmpho.dev ("I", "me", "my"). I am committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information I collect, how I use it, and what rights you have in relation to it.</p>
@@ -211,12 +214,14 @@
     <p>If you have any questions about this Privacy Policy or how I handle your data, please contact me:</p>
     <ul>
       <li><strong>Email:</strong> <a href="mailto:officialcodewithmpho@gmail.com">officialcodewithmpho@gmail.com</a></li>
-      <li><strong>Phone / WhatsApp:</strong> +27 67 111 2527</li>
+      <li><strong>Phone / WhatsApp:</strong> +27 71 123 4567</li>
       <li><strong>Location:</strong> South Africa</li>
     </ul>
 
   </div>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">

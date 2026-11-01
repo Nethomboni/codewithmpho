@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact – codewithmpho.dev</title>
-  <meta name="description" content="Get in touch with Mpho. Let's build something amazing together." />
+  <meta name="description" content="Get in touch with Mpho. Let's build something useful together." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/pages.css" />
-  <script defer src="../js/speed-insights.bundle.js"></script>
 </head>
 <body>
+<script src="../js/icons.js"></script>
 
 <!-- NAVBAR -->
 <nav class="navbar dark" id="navbar">
@@ -25,32 +26,34 @@
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
   <div class="navbar-cta">
-    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
-    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">☀️</button>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
+    <button class="theme-toggle" type="button" aria-label="Go to contact form" title="Contact me"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg></button>
   </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="projects.html">Projects</a>
   <a href="services.html">Services</a>
   <a href="pricing.html">Pricing</a>
   <a href="contact.html" class="active">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+  <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
 </div>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-content">
     <span class="section-label">Get In Touch</span>
-    <h1>Let's build something <span class="italic-gold">amazing</span> together.</h1>
+    <h1>Let's build something <span class="italic-gold">useful</span> together.</h1>
     <p>Have a project in mind or just want to say hello? I'd love to hear from you. Let's discuss how we can bring your ideas to life.</p>
-    <a href="#contact-form" class="btn btn-primary">Let's Work Together →</a>
-    <div style="margin-top:20px;display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(245,240,232,0.45);">
-      ⏰ Usually replies within 24 hours
+    <a href="#contact-form" class="btn btn-primary">Let's Work Together</a>
+    <div style="margin-top:20px;display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(245,240,232,0.72);">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg> Usually replies within 24 hours
     </div>
   </div>
 </section>
@@ -68,30 +71,30 @@
       <form id="contact-form-el" novalidate>
         <div class="form-row">
           <div class="form-group">
-            <span class="form-icon">👤</span>
-            <input type="text" class="form-control" placeholder="Your Name" name="name" required />
+            <span class="form-icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user"></use></svg></span>
+            <input type="text" class="form-control" placeholder="Your Name" aria-label="Your name" autocomplete="name" name="name" required />
           </div>
           <div class="form-group">
-            <span class="form-icon">✉️</span>
-            <input type="email" class="form-control" placeholder="Your Email" name="email" required />
+            <span class="form-icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg></span>
+            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your email" autocomplete="email" name="email" required />
           </div>
         </div>
         <div class="form-group">
-          <span class="form-icon">📋</span>
-          <input type="text" class="form-control" placeholder="Subject" name="subject" required />
+          <span class="form-icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-file-text"></use></svg></span>
+          <input type="text" class="form-control" placeholder="Subject" aria-label="Subject" name="subject" required />
         </div>
         <div class="form-group">
-          <span class="form-icon" style="top:18px;transform:none;">✏️</span>
-          <textarea class="form-control" placeholder="Tell me about your project..." name="message" rows="6" required></textarea>
+          <span class="form-icon" aria-hidden="true" style="top:18px;transform:none;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pencil"></use></svg></span>
+          <textarea class="form-control" placeholder="Tell me about your project..." aria-label="Message" name="message" rows="6" required></textarea>
         </div>
-        <div id="form-success" style="display:none;padding:14px 18px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);border-radius:10px;color:#16a34a;font-size:0.875rem;margin-bottom:16px;">
-          ✅ Your message has been sent! I'll get back to you within 24 hours.
+        <div id="form-success" class="form-alert form-alert--success" role="status" style="display:none;">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-circle-check"></use></svg><span class="form-alert-text">Your message has been sent! I'll get back to you within 24 hours.</span>
         </div>
-        <div id="form-error" style="display:none;padding:14px 18px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:10px;color:#dc2626;font-size:0.875rem;margin-bottom:16px;">
-          ❌ Something went wrong. Please try again or email me directly.
+        <div id="form-error" class="form-alert form-alert--error" role="alert" style="display:none;">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-circle-alert"></use></svg><span class="form-alert-text">Something went wrong. Please try again or email me directly.</span>
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px 24px;font-size:0.95rem;" id="submit-btn">
-          Send Message →
+          <span class="btn-label">Send Message</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-send"></use></svg>
         </button>
         <div class="form-privacy">Your information is safe with me. I'll never share it.</div>
       </form>
@@ -104,7 +107,7 @@
 
         <!-- Email -->
         <div class="contact-info-card">
-          <div class="contact-info-icon">📧</div>
+          <div class="contact-info-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg></div>
           <div class="contact-info-text">
             <h4>Email</h4>
             <p><a href="mailto:officialcodewithmpho@gmail.com">officialcodewithmpho@gmail.com</a></p>
@@ -115,63 +118,60 @@
         <!-- WhatsApp -->
         <a href="https://wa.me/27671112527?text=Hi%20Mpho%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
            target="_blank" rel="noopener noreferrer"
-           class="contact-info-card whatsapp-card"
-           aria-label="Open WhatsApp chat with Mpho">
-          <div class="contact-info-icon">📞</div>
+           class="contact-info-card whatsapp-card">
+          <div class="contact-info-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg></div>
           <div class="contact-info-text">
             <h4>Phone / WhatsApp</h4>
             <p style="font-weight:600;color:var(--text-primary);">+27 67 111 2527</p>
             <p style="font-size:0.78rem;color:var(--text-muted);">Available Mon – Fri, 9am – 6pm SAST</p>
           </div>
-          <span class="contact-info-arrow whatsapp-arrow">→</span>
+          <span class="contact-info-arrow whatsapp-arrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span>
         </a>
 
         <!-- Location -->
-        <a href="https://maps.google.com/?q=Pretoria,South+Africa"
+        <a href="https://maps.google.com/?q=Johannesburg,South+Africa"
            target="_blank" rel="noopener noreferrer"
-           class="contact-info-card location-card"
-           aria-label="Open Pretoria, South Africa in Google Maps">
-          <div class="contact-info-icon">📍</div>
+           class="contact-info-card location-card">
+          <div class="contact-info-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"></use></svg></div>
           <div class="contact-info-text">
             <h4>Location</h4>
-            <p style="font-weight:600;color:var(--text-primary);">Pretoria, South Africa</p>
+            <p style="font-weight:600;color:var(--text-primary);">Johannesburg, South Africa</p>
             <p style="font-size:0.78rem;color:var(--text-muted);">Available for remote work worldwide</p>
           </div>
-          <span class="contact-info-arrow location-arrow">→</span>
+          <span class="contact-info-arrow location-arrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span>
         </a>
 
         <!-- Schedule Call -->
         <div class="contact-info-card schedule-card"
              role="button" tabindex="0"
-             aria-label="Book a free 15-minute discovery call"
              id="open-schedule-modal">
-          <div class="contact-info-icon">📅</div>
+          <div class="contact-info-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar-check"></use></svg></div>
           <div class="contact-info-text">
             <h4>Schedule a Call</h4>
             <p style="font-weight:600;color:var(--text-primary);">Book a free discovery call</p>
             <p style="font-size:0.78rem;color:var(--text-muted);">15-min call to discuss your project.</p>
           </div>
-          <span class="contact-info-arrow schedule-arrow">→</span>
+          <span class="contact-info-arrow schedule-arrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></span>
         </div>
 
       </div>
 
       <!-- Embedded Map -->
-      <section id="map-container" class="contact-map" aria-label="Interactive map showing Pretoria, South Africa">
+      <section id="map-container" class="contact-map" aria-label="Interactive map showing Johannesburg, South Africa">
         <iframe
           title="Map showing CodeWithMpho location"
-          src="https://www.google.com/maps?q=Pretoria,South+Africa&output=embed"
+          src="https://www.google.com/maps?q=Johannesburg,South+Africa&output=embed"
           loading="lazy"
           allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
-          aria-label="Interactive map showing Pretoria, South Africa"
+          aria-label="Interactive map showing Johannesburg, South Africa"
           tabindex="0"
         ></iframe>
-        <a href="https://maps.google.com/?q=Pretoria,South+Africa"
+        <a href="https://maps.google.com/?q=Johannesburg,South+Africa"
            target="_blank" rel="noopener noreferrer"
            class="directions-btn"
-           aria-label="Get directions to Pretoria, South Africa">
-          Get Directions →
+           aria-label="Get directions to Johannesburg, South Africa">
+          Get Directions <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg>
         </a>
       </section>
     </div>
@@ -184,12 +184,12 @@
 ═══════════════════════════════════════════════ -->
 <div id="schedule-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
   <div class="modal-box">
-    <button class="modal-close" id="close-schedule-modal" aria-label="Close modal">✕</button>
+    <button class="modal-close" id="close-schedule-modal" type="button" aria-label="Close modal"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg></button>
 
     <!-- Step 1: Date & Time -->
     <div class="modal-step" id="step-1">
       <div class="modal-header">
-        <div class="modal-icon">📅</div>
+        <div class="modal-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg></div>
         <div>
           <h2 id="modal-title">Book a Discovery Call</h2>
           <p>15 min · Free · Mon–Fri · SAST</p>
@@ -207,19 +207,19 @@
             <span class="spinner"></span> Checking availability…
           </div>
           <div class="time-slots" id="time-slots"></div>
-          <span class="modal-hint">🌅 Morning 06:00 – 08:00 &nbsp;|&nbsp; 🌙 Evening 19:00 – 23:00</span>
+          <span class="modal-hint"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sunrise"></use></svg> Morning 06:00 – 08:00 <span aria-hidden="true">|</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-moon"></use></svg> Evening 19:00 – 23:00</span>
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-full" id="step1-next" disabled>Continue →</button>
+        <button class="btn btn-primary btn-full" id="step1-next" disabled>Continue <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button>
       </div>
     </div>
 
     <!-- Step 2: Your Details -->
     <div class="modal-step" id="step-2" style="display:none;">
       <div class="modal-header">
-        <button class="modal-back" id="step2-back" aria-label="Go back">←</button>
-        <div class="modal-icon">👤</div>
+        <button class="modal-back" id="step2-back" type="button" aria-label="Go back"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-left"></use></svg></button>
+        <div class="modal-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user"></use></svg></div>
         <div>
           <h2>Your Details</h2>
           <p id="step2-summary">—</p>
@@ -238,11 +238,11 @@
           <label for="booking-project">Project Details <span style="font-size:0.73rem;color:var(--text-muted);">(optional)</span></label>
           <textarea id="booking-project" class="modal-input modal-textarea" placeholder="Tell me a little about what you'd like to discuss…"></textarea>
         </div>
-        <div id="booking-error" class="booking-error" style="display:none;"></div>
+        <div id="booking-error" class="booking-error" role="alert" style="display:none;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-circle-alert"></use></svg><span class="booking-error-text"></span></div>
       </div>
       <div class="modal-footer">
         <button class="btn btn-primary btn-full" id="step2-confirm">
-          <span id="confirm-label">Confirm Booking →</span>
+          <span id="confirm-label">Confirm Booking <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></span>
           <span id="confirm-spinner" style="display:none;" class="btn-spinner"></span>
         </button>
       </div>
@@ -251,7 +251,7 @@
     <!-- Step 3: Confirmation -->
     <div class="modal-step" id="step-3" style="display:none;">
       <div class="modal-header confirmation-header">
-        <div class="modal-icon success-icon">✅</div>
+        <div class="modal-icon success-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-circle-check"></use></svg></div>
         <div>
           <h2>You're Booked!</h2>
           <p id="confirmation-text"></p>
@@ -303,43 +303,43 @@
       <div class="faq-title">Frequently Asked Questions</div>
       <div class="faq-list">
         <div class="faq-item open">
-          <div class="faq-header">
-            <div class="faq-icon">⏰</div>
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="true">
+            <div class="faq-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg></div>
             <div class="faq-q">
               <h4>How long does a typical project take?</h4>
               <p>Project timelines vary depending on the scope and complexity. A small website can take 1–2 weeks, while larger projects may take 4–8 weeks.</p>
             </div>
-            <span class="faq-toggle">▾</span>
+            <span class="faq-toggle" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></span>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-header">
-            <div class="faq-icon">🚀</div>
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
             <div class="faq-q">
               <h4>How do we get started?</h4>
               <p>Simply send me a message through the form. I'll get back to you, learn more about your project and guide you through the next steps.</p>
             </div>
-            <span class="faq-toggle">▾</span>
+            <span class="faq-toggle" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></span>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-header">
-            <div class="faq-icon">🌍</div>
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"></use></svg></div>
             <div class="faq-q">
               <h4>Do you work with international clients?</h4>
               <p>Yes! I work with clients from all over the world. Location is not a barrier. We can collaborate remotely with ease.</p>
             </div>
-            <span class="faq-toggle">▾</span>
+            <span class="faq-toggle" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></span>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-header">
-            <div class="faq-icon">❓</div>
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-circle-help"></use></svg></div>
             <div class="faq-q">
               <h4>What if I'm not sure about my requirements?</h4>
               <p>No problem! I can help you clarify your ideas and suggest the best solution for your goals and budget.</p>
             </div>
-            <span class="faq-toggle">▾</span>
+            <span class="faq-toggle" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></span>
           </div>
         </div>
       </div>
@@ -351,15 +351,17 @@
 <div class="cta-band">
   <div class="cta-band-inner">
     <div class="cta-band-left">
-      <div class="cta-band-icon">🚀</div>
+      <div class="cta-band-icon"><svg class="icon icon-lg" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
       <div class="cta-band-text">
         <h3>Ready to bring your idea to life?</h3>
         <p>I'm excited to hear about your project. Let's create something that makes an impact.</p>
       </div>
     </div>
-    <a href="#contact-form" class="btn btn-primary">Let's Work Together →</a>
+    <a href="#contact-form" class="btn btn-primary">Let's Work Together <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
   </div>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -413,14 +415,19 @@
 // or use the Netlify Function API endpoints (recommended)
 // ═══════════════════════════════════════════════════════════════
 const API = {
-  getBookings:   '/api/get-bookings',
-  createBooking: '/api/create-booking',
-  sendContact:   '/api/send-contact',
+  getBookings:   '/.netlify/functions/get-bookings',
+  createBooking: '/.netlify/functions/create-booking',
 };
 
 // ─────────────────────────────────────────────────────────────
 // CONTACT FORM
 // ─────────────────────────────────────────────────────────────
+function showAlert(el, text) {
+  const t = el.querySelector('.form-alert-text');
+  if (t && text) t.textContent = text;
+  el.style.display = 'flex';
+}
+
 document.getElementById('contact-form-el').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn     = document.getElementById('submit-btn');
@@ -433,44 +440,37 @@ document.getElementById('contact-form-el').addEventListener('submit', async func
   const message = this.message.value.trim();
 
   if (!name || !email || !subject || !message) {
-    error.textContent = '❌ Please fill in all fields.';
-    error.style.display = 'block';
+    showAlert(error, 'Please fill in all fields.');
     success.style.display = 'none';
     return;
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    error.textContent = '❌ Please enter a valid email address.';
-    error.style.display = 'block';
+    showAlert(error, 'Please enter a valid email address.');
     success.style.display = 'none';
     return;
   }
 
-  btn.textContent = 'Sending…';
+  const btnLabel = btn.querySelector('.btn-label');
+  btnLabel.textContent = 'Sending…';
   btn.disabled = true;
   error.style.display = 'none';
 
   try {
-    const res  = await fetch(API.sendContact, {
+    const res = await fetch('/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, subject, message }),
     });
-    const json = await res.json().catch(() => ({}));
-
-    if (!res.ok || !json.success) {
-      error.textContent = `❌ ${json.message || 'Something went wrong. Please email me directly at officialcodewithmpho@gmail.com'}`;
-      error.style.display = 'block';
-      success.style.display = 'none';
-      return;
+    if (res.ok) {
+      showAlert(success);
+      this.reset();
+    } else {
+      throw new Error('Server error');
     }
-
-    success.style.display = 'block';
-    this.reset();
   } catch {
-    error.textContent = '❌ Something went wrong. Please email me directly at officialcodewithmpho@gmail.com';
-    error.style.display = 'block';
+    showAlert(error, 'Something went wrong. Please email me directly at officialcodewithmpho@gmail.com');
   } finally {
-    btn.textContent = 'Send Message →';
+    btnLabel.textContent = 'Send Message';
     btn.disabled = false;
   }
 });
@@ -491,12 +491,14 @@ const steps    = [
 let selectedDate = null;
 let selectedTime = null;
 let bookingPayload = {};
+let lastFocus = null;
 
 function showStep(n) {
   steps.forEach((s, i) => s.style.display = (i + 1 === n) ? 'block' : 'none');
 }
 
 function openModal() {
+  lastFocus = document.activeElement;
   modal.setAttribute('aria-hidden', 'false');
   modal.classList.add('is-open');
   document.body.style.overflow = 'hidden';
@@ -506,13 +508,10 @@ function openModal() {
 }
 
 function closeModal() {
-  // Move focus out of the modal BEFORE hiding it from assistive tech —
-  // otherwise a focused descendant (e.g. the close or done button) keeps
-  // focus inside an aria-hidden element, which browsers warn about.
-  openBtn.focus();
   modal.setAttribute('aria-hidden', 'true');
   modal.classList.remove('is-open');
   document.body.style.overflow = '';
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
 }
 
 function resetModal() {
@@ -573,14 +572,10 @@ document.getElementById('booking-date').addEventListener('change', async functio
   selectedTime = null;
 
   try {
-    const res  = await fetch(`${API.getBookings}?date=${dateVal}`);
-    const json = await res.json();
-
-    if (!res.ok || !Array.isArray(json.bookedSlots)) {
-      throw new Error(json.error || 'Failed to load availability');
-    }
-
-    renderSlots(json.bookedSlots);
+    const res      = await fetch(`${API.getBookings}?date=${dateVal}`);
+    const json     = await res.json();
+    const booked   = json.bookedSlots || [];
+    renderSlots(booked);
   } catch {
     document.getElementById('time-slots').innerHTML =
       '<p style="color:#dc2626;font-size:0.83rem;">Could not load availability. Please try again.</p>';
@@ -608,10 +603,10 @@ function renderSlots(booked) {
   const morning = genSlots(6, 8);
   const evening = genSlots(19, 23);
 
-  const makeGroup = (label, slots) => {
+  const makeGroup = (icon, label, slots) => {
     const groupLabel = document.createElement('div');
     groupLabel.className = 'slot-group-label';
-    groupLabel.textContent = label;
+    groupLabel.innerHTML = Icons.icon(icon) + '<span>' + label + '</span>';
     container.appendChild(groupLabel);
 
     const grid = document.createElement('div');
@@ -643,8 +638,8 @@ function renderSlots(booked) {
     container.appendChild(grid);
   };
 
-  makeGroup('🌅 Morning', morning);
-  makeGroup('🌙 Evening', evening);
+  makeGroup('sunrise', 'Morning', morning);
+  makeGroup('moon', 'Evening', evening);
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -671,6 +666,12 @@ document.getElementById('step2-back').addEventListener('click', () => showStep(1
 // ─────────────────────────────────────────────────────────────
 // CONFIRM BOOKING – hits the Netlify Function
 // ─────────────────────────────────────────────────────────────
+function showBookingError(msg) {
+  const el = document.getElementById('booking-error');
+  el.querySelector('.booking-error-text').textContent = msg;
+  el.style.display = 'flex';
+}
+
 document.getElementById('step2-confirm').addEventListener('click', async () => {
   const name    = document.getElementById('booking-name').value.trim();
   const email   = document.getElementById('booking-email').value.trim();
@@ -680,13 +681,11 @@ document.getElementById('step2-confirm').addEventListener('click', async () => {
   errEl.style.display = 'none';
 
   if (!name || !email) {
-    errEl.textContent = '❌ Please enter your name and email.';
-    errEl.style.display = 'block';
+    showBookingError('Please enter your name and email.');
     return;
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    errEl.textContent = '❌ Please enter a valid email address.';
-    errEl.style.display = 'block';
+    showBookingError('Please enter a valid email address.');
     return;
   }
 
@@ -711,8 +710,7 @@ document.getElementById('step2-confirm').addEventListener('click', async () => {
     const json = await res.json();
 
     if (!res.ok || !json.success) {
-      errEl.textContent = `❌ ${json.message || 'Booking failed. Please try again.'}`;
-      errEl.style.display = 'block';
+      showBookingError(json.message || 'Booking failed. Please try again.');
       return;
     }
 
@@ -722,8 +720,7 @@ document.getElementById('step2-confirm').addEventListener('click', async () => {
     showStep(3);
 
   } catch {
-    errEl.textContent = '❌ Network error. Please check your connection and try again.';
-    errEl.style.display = 'block';
+    showBookingError('Network error. Please check your connection and try again.');
   } finally {
     document.getElementById('confirm-label').style.display  = 'inline';
     document.getElementById('confirm-spinner').style.display = 'none';

@@ -7,9 +7,9 @@
   <meta name="description" content="Simple, transparent pricing for every stage of your journey. Starter, Professional and Premium packages." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/pages.css" />
-  <script defer src="../js/speed-insights.bundle.js"></script>
   <style>
   /* ============================================
      PRICING MODAL SYSTEM
@@ -36,9 +36,7 @@
     position: absolute;
     inset: 0;
     background: rgba(14,12,10,0.80);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-  }
+}
 
   .pkg-modal {
     position: relative;
@@ -47,17 +45,15 @@
     max-width: 980px;
     max-height: 92vh;
     background: #faf7f2;
-    border-radius: 28px;
+    border-radius: 14px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     box-shadow:
-      0 40px 120px rgba(0,0,0,0.55),
-      0 0 0 1px rgba(201,146,42,0.14),
-      inset 0 1px 0 rgba(255,255,255,0.5);
+      0 24px 60px rgba(0,0,0,0.45);
     transform: translateY(48px) scale(0.95);
     transition: transform 0.5s cubic-bezier(0.34,1.4,0.64,1);
-  }
+}
   .pkg-overlay.open .pkg-modal {
     transform: translateY(0) scale(1);
   }
@@ -71,16 +67,8 @@
   .pkg-header-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #1a1512 0%, #2a2018 60%, #1a1512 100%);
-  }
-  .pkg-header-glow {
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 240px; height: 240px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,146,42,0.16) 0%, transparent 70%);
-    pointer-events: none;
-  }
+    background: #17130f;
+}
   .pkg-header-content {
     position: relative;
     z-index: 1;
@@ -97,21 +85,22 @@
   }
   .pkg-header-icon {
     width: 54px; height: 54px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, rgba(201,146,42,0.22), rgba(201,146,42,0.08));
+    border-radius: 10px;
+    background: rgba(201,146,42,0.12);
     border: 1px solid rgba(201,146,42,0.28);
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.55rem;
     flex-shrink: 0;
-  }
+    color: var(--gold-light);
+}
   .pkg-header-label {
-    font-size: 0.67rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
+    font-size: 0.74rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0;
     color: rgba(240,200,120,0.7);
     margin-bottom: 3px;
-  }
+    font-family: var(--font-mono);
+}
   .pkg-header-title {
     font-family: var(--font-display);
     font-size: 1.5rem;
@@ -135,33 +124,32 @@
     align-items: center;
     gap: 5px;
     padding: 5px 14px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-warm));
-    font-size: 0.67rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #fff;
+    border-radius: 6px;
+    background: var(--gold);
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #1a1208;
     white-space: nowrap;
-  }
+    font-family: var(--font-mono);
+}
   .pkg-close-btn {
-    width: 36px; height: 36px;
-    border-radius: 50%;
+    width: 44px; height: 44px;
+    border-radius: 10px;
     border: 1px solid rgba(245,240,232,0.16);
     background: rgba(245,240,232,0.05);
     color: rgba(245,240,232,0.65);
     cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
     transition: var(--transition);
     flex-shrink: 0;
-  }
+}
   .pkg-close-btn:hover {
     background: rgba(201,146,42,0.14);
     border-color: rgba(201,146,42,0.4);
     color: var(--gold-pale);
-    transform: scale(1.1);
-  }
+}
 
   /* SCROLLABLE BODY */
   .pkg-modal-body {
@@ -180,21 +168,18 @@
     flex-shrink: 0;
   }
   .pkg-carousel-label {
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    color: var(--gold-ink);
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-  .pkg-carousel-label::before {
-    content: '';
-    width: 18px; height: 1px;
-    background: var(--gold);
-  }
+    font-family: var(--font-mono);
+}
+.pkg-carousel-label::before { content: '//'; opacity: 0.7; }
 
   .pkg-carousel-wrap {
     position: relative;
@@ -224,14 +209,13 @@
     flex-direction: column;
   }
   .pkg-slide:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.45);
+    box-shadow: none;
     border-color: rgba(201,146,42,0.22);
-  }
+}
   .pkg-slide.is-active {
     border-color: var(--gold);
-    box-shadow: 0 0 0 2px var(--gold), 0 16px 48px rgba(0,0,0,0.4);
-  }
+    box-shadow: 0 0 0 2px var(--gold);
+}
 
   /* Browser chrome on slide */
   .pkg-slide-chrome {
@@ -292,24 +276,23 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px; height: 30px;
-    border-radius: 50%;
+    width: 36px; height: 36px;
+    border-radius: 10px;
     background: var(--gold);
     border: none;
-    color: #fff;
+    color: #1a1208;
     cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
     z-index: 2;
     transition: var(--transition);
     box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     line-height: 1;
-  }
-  .carousel-arrow:hover { background: var(--gold-light); transform: translateY(-50%) scale(1.1); }
-  .carousel-arrow.prev { left: -15px; }
-  .carousel-arrow.next { right: -15px; }
+}
+  .carousel-arrow:hover { background: var(--gold-light); transform: translateY(-50%); }
+  .carousel-arrow.prev { left: -18px; }
+  .carousel-arrow.next { right: -18px; }
   .carousel-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
-  .carousel-arrow:disabled:hover { transform: translateY(-50%) scale(1); background: var(--gold); }
+  .carousel-arrow:disabled:hover { transform: translateY(-50%); background: var(--gold); }
 
   .pkg-carousel-nav {
     display: flex;
@@ -343,16 +326,17 @@
   }
 
   .pkg-section-label {
-    font-size: 0.67rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    color: var(--gold-ink);
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 6px;
-  }
+    font-family: var(--font-mono);
+}
   .pkg-desc-text {
     font-size: 0.875rem;
     color: var(--text-secondary);
@@ -360,14 +344,14 @@
     margin-bottom: 22px;
   }
   .pkg-features-title {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gold-ink);
+    text-transform: lowercase;
+    letter-spacing: 0;
     margin-bottom: 12px;
-  }
+}
   .pkg-features-list {
     list-style: none;
     display: grid;
@@ -383,17 +367,15 @@
     line-height: 1.45;
   }
   .pkg-check {
-    width: 17px; height: 17px;
+    width: 18px; height: 18px;
     border-radius: 50%;
     background: rgba(201,146,42,0.1);
     border: 1px solid rgba(201,146,42,0.2);
     display: inline-flex; align-items: center; justify-content: center;
-    font-size: 0.58rem;
-    color: var(--gold);
-    font-weight: 800;
+    color: var(--gold-ink);
     flex-shrink: 0;
     margin-top: 1px;
-  }
+}
 
   /* Meta column */
   .pkg-meta-col {
@@ -409,14 +391,17 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.04);
   }
   .pkg-info-card h4 {
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    color: var(--gold-ink);
     margin-bottom: 10px;
-  }
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
   .pkg-timeline { display: flex; flex-direction: column; gap: 7px; }
   .pkg-timeline-item {
     display: flex; align-items: center; gap: 10px;
@@ -431,13 +416,14 @@
   .pkg-best-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .pkg-tag {
     padding: 4px 11px;
-    border-radius: 50px;
+    border-radius: 6px;
     background: rgba(201,146,42,0.07);
     border: 1px solid rgba(201,146,42,0.14);
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     font-weight: 600;
     color: var(--text-secondary);
-  }
+    font-family: var(--font-mono);
+}
 
   /* FOOTER */
   .pkg-modal-footer {
@@ -453,10 +439,10 @@
   .pkg-footer-price-label {
     font-size: 0.7rem;
     color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    text-transform: none;
+    letter-spacing: 0;
     margin-bottom: 2px;
-  }
+}
   .pkg-footer-price-value {
     font-family: var(--font-body);
     font-size: 1.45rem;
@@ -508,13 +494,20 @@
     .pkg-slide { flex: 0 0 calc(78% - 7px); }
     .pkg-content-area { padding: 18px 16px; }
     .pkg-header-content { padding: 14px 16px; }
-    .pkg-header-icon { width: 44px; height: 44px; font-size: 1.3rem; }
+    .pkg-header-icon { width: 44px; height: 44px; }
     .pkg-modal-footer { padding: 14px 16px; }
     .pkg-footer-ctas { flex-direction: column; }
   }
+    /* icons inside the package modal */
+    .pkg-header-icon .icon { width: 26px; height: 26px; }
+    .pkg-header-badge .icon { width: 12px; height: 12px; }
+    .pkg-close-btn .icon, .carousel-arrow .icon { width: 18px; height: 18px; }
+    .pkg-check .icon { width: 11px; height: 11px; stroke-width: 3; }
+    .pkg-info-card h4 .icon { width: 15px; height: 15px; }
   </style>
 </head>
 <body>
+<script src="../js/icons.js"></script>
 
 <!-- NAVBAR -->
 <nav class="navbar dark" id="navbar">
@@ -528,20 +521,22 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="navbar-cta">
-    <a href="contact.html" class="btn btn-primary">Let's Work Together &rarr;</a>
-    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">&#9728;&#65039;</button>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
+    <button class="theme-toggle" type="button" aria-label="Go to contact form" title="Contact me"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg></button>
   </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="projects.html">Projects</a>
   <a href="services.html">Services</a>
   <a href="pricing.html" class="active">Pricing</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Let's Work Together &rarr;</a>
+  <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
 </div>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="page-hero">
@@ -550,7 +545,7 @@
     <span class="section-label">Pricing</span>
     <h1>Simple, transparent pricing for <span class="italic-gold">every stage</span> of your journey.</h1>
     <p>Choose the perfect plan for your needs. Whether you need a stunning website, a powerful application, or ongoing support &mdash; I&rsquo;ve got you covered.</p>
-    <a href="#pricing-cards" class="btn btn-primary">View Packages &rarr;</a>
+    <a href="#pricing-cards" class="btn btn-primary">View Packages</a>
   </div>
 </section>
 
@@ -558,26 +553,26 @@
 <section class="section pricing-section" id="pricing-cards">
   <div class="pricing-section-inner container">
     <div style="text-align:center;margin-bottom:56px;" class="animate-on-scroll">
-      <span class="section-label" style="display:inline-block;background:rgba(201,146,42,0.08);padding:6px 20px;border-radius:50px;border:1px solid rgba(201,146,42,0.2);">Plans &amp; Pricing</span>
+      <span class="section-label">Plans &amp; Pricing</span>
       <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);margin-top:16px;margin-bottom:12px;">Find the perfect plan for your project</h2>
       <p style="color:var(--text-secondary);max-width:460px;margin:0 auto;line-height:1.7;">All plans include high-quality design, clean code, and responsive support. Click <em>Get Started</em> to explore real examples.</p>
     </div>
 
     <div style="text-align:center;margin-bottom:56px;">
       <div class="pricing-toggle">
-        <button class="pricing-toggle-btn active">&#x1F532; One-time Project</button>
-        <button class="pricing-toggle-btn">&#x1F4AC; Monthly Support</button>
+        <button type="button" class="pricing-toggle-btn active"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-briefcase"></use></svg> One-time Project</button>
+        <button type="button" class="pricing-toggle-btn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-message-circle"></use></svg> Monthly Support</button>
       </div>
     </div>
 
     <div class="pricing-cards">
       <!-- Starter -->
       <div class="pricing-card animate-on-scroll">
-        <div class="pricing-icon">&#x1F680;</div>
+        <div class="pricing-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
         <h3>Starter</h3>
         <p class="pricing-subtitle">Perfect for small projects and startups.</p>
-        <div class="pricing-price">R800 &ndash; R1,500</div>
-        <div class="pricing-period">Deposit &ndash; R500</div>
+        <div class="pricing-price">R1,500 &ndash; R3,500</div>
+        <div class="pricing-period">One-time payment</div>
         <div class="pricing-features-title">What&rsquo;s Included</div>
         <ul class="pricing-features-list">
           <li>Up to 5 Pages</li>
@@ -587,7 +582,7 @@
           <li>1 Round of Revisions</li>
         </ul>
         <button onclick="openPackageModal('starter')" class="btn btn-outline-dark" style="width:100%;justify-content:center;cursor:pointer;">
-          Get Started &rarr;
+          Get Started <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
         </button>
         <p class="pricing-note">Best for landing pages and small business sites.</p>
       </div>
@@ -595,11 +590,11 @@
       <!-- Professional -->
       <div class="pricing-card featured animate-on-scroll animate-delay-1">
         <div class="pricing-badge">Most Popular</div>
-        <div class="pricing-icon">&#11088;</div>
+        <div class="pricing-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg></div>
         <h3>Professional</h3>
         <p class="pricing-subtitle">Ideal for growing businesses and brands.</p>
-        <div class="pricing-price">R1,800 &ndash; R2,500</div>
-        <div class="pricing-period">Deposit &ndash; R500</div>
+        <div class="pricing-price">R4,000 &ndash; R7,500</div>
+        <div class="pricing-period">One-time payment</div>
         <div class="pricing-features-title">What&rsquo;s Included</div>
         <ul class="pricing-features-list">
           <li>Up to 10 Pages</li>
@@ -610,18 +605,18 @@
           <li>Social Media Integration</li>
         </ul>
         <button onclick="openPackageModal('professional')" class="btn btn-primary" style="width:100%;justify-content:center;cursor:pointer;">
-          Get Started &rarr;
+          Get Started <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
         </button>
         <p class="pricing-note">Best for business websites and content-driven sites.</p>
       </div>
 
       <!-- Premium -->
       <div class="pricing-card animate-on-scroll animate-delay-2">
-        <div class="pricing-icon">&#x1F48E;</div>
+        <div class="pricing-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gem"></use></svg></div>
         <h3>Premium</h3>
         <p class="pricing-subtitle">For advanced solutions and scalability.</p>
-        <div class="pricing-price">R3,000 &ndash; R4,000</div>
-        <div class="pricing-period">Deposit &ndash; R500</div>
+        <div class="pricing-price">R8,000+</div>
+        <div class="pricing-period">One-time payment</div>
         <div class="pricing-features-title">What&rsquo;s Included</div>
         <ul class="pricing-features-list">
           <li>Unlimited Pages</li>
@@ -632,7 +627,7 @@
           <li>Priority Support</li>
         </ul>
         <button onclick="openPackageModal('premium')" class="btn btn-outline-dark" style="width:100%;justify-content:center;cursor:pointer;">
-          Get Started &rarr;
+          Get Started <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
         </button>
         <p class="pricing-note">Best for web applications and complex projects.</p>
       </div>
@@ -644,19 +639,19 @@
 <div class="guarantees-strip">
   <div class="guarantees-inner container">
     <div class="guarantee-item animate-on-scroll">
-      <div class="guarantee-icon">&#x1F6E1;&#xFE0F;</div>
+      <div class="guarantee-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield-check"></use></svg></div>
       <div class="guarantee-text"><h4>100% Satisfaction</h4><p>I ensure you&rsquo;re happy before delivery.</p></div>
     </div>
     <div class="guarantee-item animate-on-scroll animate-delay-1">
-      <div class="guarantee-icon">&#x23F0;</div>
+      <div class="guarantee-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg></div>
       <div class="guarantee-text"><h4>On-time Delivery</h4><p>Your project delivered on time, every time.</p></div>
     </div>
     <div class="guarantee-item animate-on-scroll animate-delay-2">
-      <div class="guarantee-icon">&lt;/&gt;</div>
+      <div class="guarantee-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code-xml"></use></svg></div>
       <div class="guarantee-text"><h4>Clean &amp; Scalable Code</h4><p>High-quality, maintainable and future-ready.</p></div>
     </div>
     <div class="guarantee-item animate-on-scroll animate-delay-3">
-      <div class="guarantee-icon">&#x1F3A7;</div>
+      <div class="guarantee-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-headphones"></use></svg></div>
       <div class="guarantee-text"><h4>Support &amp; Guidance</h4><p>Ongoing support even after project completion.</p></div>
     </div>
   </div>
@@ -666,15 +661,17 @@
 <div class="cta-band">
   <div class="cta-band-inner">
     <div class="cta-band-left">
-      <div class="cta-band-icon">&#x1F680;</div>
+      <div class="cta-band-icon"><svg class="icon icon-lg" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
       <div class="cta-band-text">
         <h3>Have a custom project in mind?</h3>
-        <p><span class="italic-gold">Let&rsquo;s build something amazing.</span> Not sure which plan fits? Let&rsquo;s discuss and find the perfect solution together.</p>
+        <p><span class="italic-gold">Let&rsquo;s build something useful.</span> Not sure which plan fits? Let&rsquo;s discuss and find the perfect solution together.</p>
       </div>
     </div>
-    <a href="contact.html" class="btn btn-primary">Let&rsquo;s Work Together &rarr;</a>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
   </div>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -729,19 +726,18 @@
     <!-- Header -->
     <div class="pkg-modal-header">
       <div class="pkg-header-bg"></div>
-      <div class="pkg-header-glow"></div>
       <div class="pkg-header-content">
         <div class="pkg-header-left">
           <div class="pkg-header-icon" id="pkg-icon"></div>
           <div>
             <div class="pkg-header-label">Selected Package</div>
-            <div class="pkg-header-title" id="pkg-modal-title"></div>
+            <div class="pkg-header-title" id="pkg-modal-title">Package details</div>
             <div class="pkg-header-price" id="pkg-header-price"></div>
           </div>
         </div>
         <div class="pkg-header-right">
           <div class="pkg-header-badge" id="pkg-badge" style="display:none;"></div>
-          <button class="pkg-close-btn" onclick="closePackageModal()" aria-label="Close modal">&#x2715;</button>
+          <button class="pkg-close-btn" onclick="closePackageModal()" aria-label="Close modal" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg></button>
         </div>
       </div>
     </div>
@@ -753,11 +749,11 @@
       <div class="pkg-carousel-section">
         <div class="pkg-carousel-label" id="carousel-label">Website Examples</div>
         <div class="pkg-carousel-wrap">
-          <button class="carousel-arrow prev" id="carousel-prev" onclick="moveCarousel(-1)" aria-label="Previous">&#8249;</button>
+          <button class="carousel-arrow prev" id="carousel-prev" onclick="moveCarousel(-1)" aria-label="Previous" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-left"></use></svg></button>
           <div class="pkg-carousel-track" id="carousel-track">
             <div class="pkg-carousel-inner" id="carousel-inner"></div>
           </div>
-          <button class="carousel-arrow next" id="carousel-next" onclick="moveCarousel(1)" aria-label="Next">&#8250;</button>
+          <button class="carousel-arrow next" id="carousel-next" onclick="moveCarousel(1)" aria-label="Next" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-right"></use></svg></button>
         </div>
         <div class="pkg-carousel-nav" id="carousel-dots"></div>
       </div>
@@ -774,15 +770,15 @@
         <!-- Right -->
         <div class="pkg-meta-col">
           <div class="pkg-info-card">
-            <h4>&#x23F1;&#xFE0F; Delivery Timeline</h4>
+            <h4><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-timer"></use></svg> Delivery Timeline</h4>
             <div class="pkg-timeline" id="pkg-timeline"></div>
           </div>
           <div class="pkg-info-card">
-            <h4>&#x1F3AF; Best For</h4>
+            <h4><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg> Best For</h4>
             <div class="pkg-best-tags" id="pkg-best-tags"></div>
           </div>
           <div class="pkg-info-card">
-            <h4>&#x1F4A1; What to Expect</h4>
+            <h4><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lightbulb"></use></svg> What to Expect</h4>
             <p id="pkg-expect" style="font-size:0.835rem;color:var(--text-secondary);line-height:1.65;margin:0;"></p>
           </div>
         </div>
@@ -797,8 +793,8 @@
         <div class="pkg-footer-price-value" id="pkg-footer-price"></div>
       </div>
       <div class="pkg-footer-ctas">
-        <a href="contact.html" class="btn btn-outline-dark" id="pkg-form-btn">&#x1F4CB; Fill Project Form</a>
-        <a href="#" class="btn btn-primary btn-whatsapp" id="pkg-wa-btn" target="_blank" rel="noopener"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;display:inline;margin-right:8px;fill:currentColor;"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Continue on WhatsApp</a>
+        <a href="contact.html" class="btn btn-outline-dark" id="pkg-form-btn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clipboard-list"></use></svg> Fill Project Form</a>
+        <a href="#" class="btn btn-primary btn-whatsapp" id="pkg-wa-btn" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;display:inline;margin-right:8px;fill:currentColor;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Continue on WhatsApp</a>
       </div>
     </div>
 
@@ -816,9 +812,9 @@ const SLIDES_PER_VIEW = 3;
 
 const PACKAGES = {
   starter: {
-    icon: '🚀', title: 'Starter Package', price: 'R800 – R1,500',
+    icon: 'rocket', title: 'Starter Package', price: 'R1,500 – R3,500',
     badge: null, theme: 'starter',
-    carouselLabel: '✨ Starter Website Examples',
+    carouselLabel: 'Starter Website Examples',
     description: 'The Starter Package is perfect for individuals, freelancers and small businesses who need a clean, professional online presence. You get a beautifully designed, fully responsive website that looks great on every device — built with solid code and real attention to detail.',
     features: ['Up to 5 Pages','Responsive Mobile Design','Contact / Inquiry Form','Basic SEO Setup','Google Maps Integration','Social Media Links','Modern Clean UI','1 Round of Revisions','Fast Loading Speed','Deployment Included'],
     timeline: [
@@ -829,7 +825,7 @@ const PACKAGES = {
     ],
     bestFor: ['Portfolio Sites','Landing Pages','Small Businesses','Freelancers','Event Pages','Startups'],
     expect: 'A clean, modern website that establishes your online presence with confidence. You receive all source files, deployment support, and a walkthrough of how to update your content.',
-    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Starter Website Package* (R800 – R1,500).\n\nI would like a clean, modern website with responsive design, a contact form, and basic SEO setup.\n\nPlease send me more details and let\'s discuss my project. 😊',
+    waMessage: 'Hi Mpho,\n\nI\'m interested in the *Starter Website Package* (R1,500 – R3,500).\n\nI would like a clean, modern website with responsive design, a contact form, and basic SEO setup.\n\nPlease send me more details and let\'s discuss my project.',
     slides: [
       {caption:'Clean agency website', layout:'portfolio', img:'../assets/images/Packages/Starter package/01_agency_starter.jpg'},
       {caption:'Consultant landing page', layout:'landing', img:'../assets/images/Packages/Starter package/02_consultant_starter.jpg'},
@@ -839,9 +835,9 @@ const PACKAGES = {
     ]
   },
   professional: {
-    icon: '⭐', title: 'Professional Package', price: 'R1,800 – R2,500',
-    badge: '⭐ Most Popular', theme: 'professional',
-    carouselLabel: '✨ Professional Website Examples',
+    icon: 'star', title: 'Professional Package', price: 'R4,000 – R7,500',
+    badge: 'Most Popular', badgeIcon: 'star', theme: 'professional',
+    carouselLabel: 'Professional Website Examples',
     description: 'Designed for growing businesses and ambitious brands that need a premium, feature-rich website. Expect advanced UI sections, smooth animations, WhatsApp integration, a CMS admin panel so you can update your own content, and a polished multi-page experience that builds real trust with your audience.',
     features: ['Up to 10 Pages','Custom Premium Design','CMS / Admin Panel','WhatsApp Integration','Smooth Animations','SEO + Speed Optimisation','Social Media Integration','Blog or Services Section','2 Rounds of Revisions','Priority Email Support'],
     timeline: [
@@ -852,7 +848,7 @@ const PACKAGES = {
     ],
     bestFor: ['Service Businesses','Agencies','Restaurants','Salons & Spas','Professional Firms','Growing Brands'],
     expect: 'A premium, multi-page website with animations, WhatsApp chat integration, and a CMS so you can manage your own content. Full training on how to use the admin panel is included.',
-    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Professional Website Package* (R1,800 – R2,500).\n\nI would like a modern business website with responsive design, smooth animations, WhatsApp integration, and a CMS admin panel.\n\nPlease send me more details so we can discuss my project. 😊',
+    waMessage: 'Hi Mpho,\n\nI\'m interested in the *Professional Website Package* (R4,000 – R7,500).\n\nI would like a modern business website with responsive design, smooth animations, WhatsApp integration, and a CMS admin panel.\n\nPlease send me more details so we can discuss my project.',
     slides: [
       {caption:'Digital agency site', layout:'business', img:'../assets/images/Packages/Professional Package/01_digital_agency_professional.jpg'},
       {caption:'Business consulting firm', layout:'agency', img:'../assets/images/Packages/Professional Package/02_business_consulting_professional.jpg'},
@@ -862,10 +858,10 @@ const PACKAGES = {
     ]
   },
   premium: {
-    icon: '💎', title: 'Premium Package', price: 'R3,000 - R4,000',
-    badge: '💎 Premium', theme: 'premium',
-    carouselLabel: '✨ Premium & Advanced Examples',
-    description: 'The ultimate digital solution for businesses that need advanced functionality, custom systems, and a truly cinematic web experience. From full e-commerce stores and booking systems to custom dashboards and API integrations — this is where ideas become powerful, scalable digital products.',
+    icon: 'gem', title: 'Premium Package', price: 'R8,000+',
+    badge: 'Premium', badgeIcon: 'gem', theme: 'premium',
+    carouselLabel: 'Premium & Advanced Examples',
+    description: 'The ultimate digital solution for businesses that need advanced functionality, custom systems, and a polished, high-end web experience. From full e-commerce stores and booking systems to custom dashboards and API integrations — this is where ideas become powerful, scalable digital products.',
     features: ['Unlimited Pages','Advanced Custom Functionality','E-Commerce / Booking System','CMS / Admin Dashboard','API Integrations','SEO + Performance Optimised','Premium Animations','Payment Gateway','3 Rounds of Revisions','Dedicated Priority Support'],
     timeline: [
       {label:'Discovery & Architecture', time:'3–5 days'},
@@ -873,9 +869,9 @@ const PACKAGES = {
       {label:'Full Development', time:'2–5 weeks'},
       {label:'Total Delivery', time:'6–12 weeks'}
     ],
-    bestFor: ['E-Commerce Stores','Web Applications','Booking Platforms','Dashboards','SaaS Products','Cinematic Brands'],
+    bestFor: ['E-Commerce Stores','Web Applications','Booking Platforms','Dashboards','SaaS Products','Premium Brands'],
     expect: 'A fully custom, production-ready digital product. You receive comprehensive documentation, full source code ownership, deployment support, and post-launch assistance to ensure everything runs perfectly.',
-    waMessage: 'Hi Mpho 👋\n\nI\'m interested in the *Premium Website Package* (R3,000 - R4,000).\n\nI\'m looking for an advanced solution — this could include an e-commerce store, booking system, custom dashboard, or web application with API integrations and premium animations.\n\nPlease send me more details and let\'s set up a call to discuss my project. 😊',
+    waMessage: 'Hi Mpho,\n\nI\'m interested in the *Premium Website Package* (R8,000+).\n\nI\'m looking for an advanced solution — this could include an e-commerce store, booking system, custom dashboard, or web application with API integrations and premium animations.\n\nPlease send me more details and let\'s set up a call to discuss my project.',
     slides: [
       {caption:'Full e-commerce platform', layout:'ecomm', img:'../assets/images/Packages/Premium Package/01_ecommerce_dashboard_premium.jpg'},
       {caption:'SaaS dashboard', layout:'booking', img:'../assets/images/Packages/Premium Package/02_saas_dashboard_premium.jpg'},
@@ -920,6 +916,7 @@ function slideHTML(layout, theme) {
 
 /* --- State --- */
 let currentPkg = null;
+let lastFocus = null;
 let carouselIdx = 0;
 let totalSlides = 0;
 
@@ -928,17 +925,18 @@ function openPackageModal(key) {
   const pkg = PACKAGES[key];
   if (!pkg) return;
   currentPkg = key;
+  lastFocus = document.activeElement;
   carouselIdx = 0;
   totalSlides = pkg.slides.length;
 
   // Header
-  document.getElementById('pkg-icon').textContent = pkg.icon;
+  document.getElementById('pkg-icon').innerHTML = Icons.icon(pkg.icon);
   document.getElementById('pkg-modal-title').textContent = pkg.title;
   document.getElementById('pkg-header-price').textContent = pkg.price;
   document.getElementById('pkg-footer-price').textContent = pkg.price;
 
   const badge = document.getElementById('pkg-badge');
-  if (pkg.badge) { badge.textContent = pkg.badge; badge.style.display = 'inline-flex'; }
+  if (pkg.badge) { badge.innerHTML = (pkg.badgeIcon ? Icons.icon(pkg.badgeIcon) : '') + '<span>' + pkg.badge + '</span>'; badge.style.display = 'inline-flex'; }
   else { badge.style.display = 'none'; }
 
   // Carousel
@@ -948,7 +946,7 @@ function openPackageModal(key) {
   // Text
   document.getElementById('pkg-desc-text').textContent = pkg.description;
   document.getElementById('pkg-features-list').innerHTML = pkg.features
-    .map(f => `<li><span class="pkg-check">&#x2713;</span>${f}</li>`).join('');
+    .map(f => `<li><span class="pkg-check">${Icons.icon('check')}</span>${f}</li>`).join('');
   document.getElementById('pkg-timeline').innerHTML = pkg.timeline
     .map(t => `<div class="pkg-timeline-item"><div class="pkg-timeline-dot"></div><span style="flex:1;">${t.label}</span><span style="color:var(--gold);font-weight:700;font-size:0.78rem;white-space:nowrap;">${t.time}</span></div>`).join('');
   document.getElementById('pkg-best-tags').innerHTML = pkg.bestFor
@@ -1032,6 +1030,7 @@ function syncDots() {
 function closePackageModal() {
   document.getElementById('pkg-overlay').classList.remove('open');
   document.body.style.overflow = '';
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
 }
 
 /* --- Keyboard & backdrop --- */
