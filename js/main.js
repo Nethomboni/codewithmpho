@@ -5,7 +5,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initScrollAnimations();
-  initParticles();
   initSkillBars();
   initFAQ();
   highlightActiveNav();
@@ -36,11 +35,12 @@ function initNavbar() {
 
   // Mobile menu toggle
   if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
+    const setMenuOpen = (open) => {
+      mobileMenu.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       const spans = hamburger.querySelectorAll('span');
-      const isOpen = mobileMenu.classList.contains('open');
-      if (isOpen) {
+      if (open) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
         spans[1].style.opacity = '0';
         spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
@@ -49,20 +49,30 @@ function initNavbar() {
         spans[1].style.opacity = '';
         spans[2].style.transform = '';
       }
+    };
+
+    hamburger.addEventListener('click', () => {
+      setMenuOpen(!mobileMenu.classList.contains('open'));
     });
 
     // Close on outside click
     document.addEventListener('click', (e) => {
       if (!navbar.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.remove('open');
+        setMenuOpen(false);
+      }
+    });
+
+    // Close on Escape (and give focus back to the button)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        setMenuOpen(false);
+        hamburger.focus();
       }
     });
 
     // Close on link click
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-      });
+      link.addEventListener('click', () => setMenuOpen(false));
     });
   }
 }
@@ -131,69 +141,6 @@ function initSkillBars() {
 }
 
 // ============================================
-// PARTICLES (Hero)
-// ============================================
-
-function initParticles() {
-  const canvas = document.getElementById('particles-canvas');
-  if (!canvas) return;
-
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let animId;
-
-  function resize() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  }
-
-  resize();
-  window.addEventListener('resize', resize);
-
-  class Particle {
-    constructor() {
-      this.reset();
-    }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.5 + 0.3;
-      this.speedX = (Math.random() - 0.5) * 0.3;
-      this.speedY = -Math.random() * 0.4 - 0.1;
-      this.opacity = Math.random() * 0.5 + 0.1;
-      this.life = 0;
-      this.maxLife = Math.random() * 200 + 100;
-    }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      this.life++;
-      if (this.life > this.maxLife || this.y < 0) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201, 146, 42, ${this.opacity * (1 - this.life / this.maxLife)})`;
-      ctx.fill();
-    }
-  }
-
-  for (let i = 0; i < 60; i++) {
-    const p = new Particle();
-    p.life = Math.floor(Math.random() * p.maxLife);
-    particles.push(p);
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    animId = requestAnimationFrame(animate);
-  }
-
-  animate();
-}
-
-// ============================================
 // FAQ
 // ============================================
 
@@ -202,10 +149,24 @@ function initFAQ() {
   items.forEach(item => {
     const header = item.querySelector('.faq-header');
     if (!header) return;
-    header.addEventListener('click', () => {
+    const toggle = () => {
       const isOpen = item.classList.contains('open');
-      items.forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      items.forEach(i => {
+        i.classList.remove('open');
+        const h = i.querySelector('.faq-header');
+        if (h) h.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    };
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
     });
   });
 }
@@ -242,7 +203,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// GLOBAL CONTACT BUTTON (Sun/Star ☀️)
+// GLOBAL CONTACT BUTTON (icon button in the navbar)
 // ============================================
 
 function initGlobalContactButton() {
@@ -251,7 +212,7 @@ function initGlobalContactButton() {
 
   // Upgrade the button with accessibility + tooltip attributes
   sunBtn.setAttribute('aria-label', 'Go to contact form');
-  sunBtn.setAttribute('title', 'Contact Me');
+  sunBtn.setAttribute('title', 'Contact me');
   sunBtn.setAttribute('tabindex', '0');
   sunBtn.classList.add('sun-btn');
 

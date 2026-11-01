@@ -6,11 +6,11 @@
   <title>Terms &amp; Conditions – codewithmpho.dev</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
-  <script defer src="../js/speed-insights.bundle.js"></script>
   <style>
     .legal-hero {
-      background: linear-gradient(135deg, #1a1512 0%, #241e17 100%);
+      background: #17130f;
       padding: 120px 48px 72px;
       border-bottom: 1px solid rgba(201,146,42,0.1);
     }
@@ -32,17 +32,17 @@
     .legal-content p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 12px; }
     .legal-content ul { margin: 12px 0 16px 20px; }
     .legal-content ul li { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 6px; list-style: disc; }
-    .legal-content a { color: var(--gold); }
+    .legal-content a { color: var(--gold-ink); text-decoration: underline; text-underline-offset: 2px; }
     .legal-updated {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: rgba(201,146,42,0.07);
       border: 1px solid rgba(201,146,42,0.15);
-      border-radius: 8px;
-      padding: 8px 16px;
+      border-radius: 6px;
+      padding: 8px 14px;
       font-size: 0.8rem;
-      color: var(--gold);
+      color: var(--gold-ink);
       margin-bottom: 36px;
     }
     .toc {
@@ -55,7 +55,7 @@
     .toc h3 { font-family: var(--font-body); font-size: 0.875rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
     .toc ol { margin-left: 20px; }
     .toc ol li { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px; list-style: decimal; }
-    .toc ol li a { color: var(--gold); text-decoration: none; }
+    .toc ol li a { color: var(--gold-ink); text-decoration: none; }
     .toc ol li a:hover { text-decoration: underline; }
     @media (max-width: 768px) {
       .legal-hero { padding: 100px 24px 56px; }
@@ -68,6 +68,7 @@
   </style>
 </head>
 <body>
+<script src="../js/icons.js"></script>
 
 <!-- NAVBAR -->
 <nav class="navbar light" id="navbar">
@@ -81,21 +82,23 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="navbar-cta">
-    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
-    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">&#9728;&#65039;</button>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
+    <button class="theme-toggle" type="button" aria-label="Go to contact form" title="Contact me"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg></button>
   </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="projects.html">Projects</a>
   <a href="services.html">Services</a>
   <a href="pricing.html">Pricing</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+  <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
 </div>
+
+<main id="main">
 
 <!-- HERO -->
 <div class="legal-hero">
@@ -110,7 +113,7 @@
 <div class="legal-body">
   <div class="legal-content">
 
-    <div class="legal-updated">📅 Last updated:20 June 2026</div>
+    <div class="legal-updated"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Last updated: January 2024</div>
 
     <!-- Table of Contents -->
     <div class="toc">
@@ -217,13 +220,15 @@
     <h2 id="contact">12. Contact</h2>
     <p>If you have any questions about these Terms and Conditions, please contact me:</p>
     <ul>
-      <li><strong>Email:</strong> <a href="mailto:officilalcodewithmpho@gmail.com">officilalcodewithmpho@gmail.com</a></li>
-      <li><strong>Phone / WhatsApp:</strong> +27 67 111 2527</li>
+      <li><strong>Email:</strong> <a href="mailto:hello@codewithmpho.com">hello@codewithmpho.com</a></li>
+      <li><strong>Phone / WhatsApp:</strong> +27 71 123 4567</li>
       <li><strong>Location:</strong> South Africa</li>
     </ul>
 
   </div>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -252,13 +257,13 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:hello@codewithmpho.com">officilalcodewithmpho@gmail.com</a></li>
+          <li><a href="mailto:hello@codewithmpho.com">hello@codewithmpho.com</a></li>
           <li><a href="contact.html">Get In Touch</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 CodeWithMpho. All rights reserved.</p>
+      <p>© 2024 CodeWithMpho. All rights reserved.</p>
       <div class="footer-bottom-links">
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-and-conditions.html">Terms &amp; Conditions</a>

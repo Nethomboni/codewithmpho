@@ -7,11 +7,12 @@
   <meta name="description" content="Explore my portfolio of web, mobile and desktop projects built with passion and purpose." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/pages.css" />
-  <script defer src="../js/speed-insights.bundle.js"></script>
 </head>
 <body>
+<script src="../js/icons.js"></script>
 
 <!-- NAVBAR -->
 <nav class="navbar dark" id="navbar">
@@ -25,21 +26,23 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="navbar-cta">
-    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
-    <button class="theme-toggle" aria-label="Go to contact form" title="Contact Me" tabindex="0">☀️</button>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
+    <button class="theme-toggle" type="button" aria-label="Go to contact form" title="Contact me"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg></button>
   </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="projects.html" class="active">Projects</a>
   <a href="services.html">Services</a>
   <a href="pricing.html">Pricing</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+  <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
 </div>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="page-hero">
@@ -54,11 +57,11 @@
 <!-- FILTER TABS -->
 <div class="projects-filter">
   <div class="projects-filter-inner">
-    <div class="filter-tabs">
-      <button class="filter-tab active" data-filter="all">🔲 All Projects</button>
-      <button class="filter-tab" data-filter="websites">🖥️ Websites</button>
-      <button class="filter-tab" data-filter="mobile">📱 Mobile Apps</button>
-      <button class="filter-tab" data-filter="desktop">🖱️ Desktop Apps</button>
+    <div class="filter-tabs" role="group" aria-label="Filter projects by type">
+      <button type="button" class="filter-tab active" data-filter="all" aria-pressed="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layout-grid"></use></svg> All Projects</button>
+      <button type="button" class="filter-tab" data-filter="websites" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"></use></svg> Websites</button>
+      <button type="button" class="filter-tab" data-filter="mobile" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-smartphone"></use></svg> Mobile Apps</button>
+      <button type="button" class="filter-tab" data-filter="desktop" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-laptop"></use></svg> Desktop Apps</button>
     </div>
   </div>
 </div>
@@ -71,20 +74,24 @@
   </div>
 </section>
 
+<!-- MODAL -->
+<div class="project-overlay" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true"></div>
 
 <!-- CTA BAND -->
 <div class="cta-band">
   <div class="cta-band-inner">
     <div class="cta-band-left">
-      <div class="cta-band-icon">🚀</div>
+      <div class="cta-band-icon"><svg class="icon icon-lg" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
       <div class="cta-band-text">
         <h3>Have an idea in mind?</h3>
         <p><span class="italic-gold">Let's bring it to life.</span> I'm always open to discussing new projects and helping bring creative ideas to reality.</p>
       </div>
     </div>
-    <a href="contact.html" class="btn btn-primary">Let's Work Together →</a>
+    <a href="contact.html" class="btn btn-primary">Let's Work Together <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
   </div>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
