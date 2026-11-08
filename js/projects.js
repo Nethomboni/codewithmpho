@@ -52,23 +52,26 @@ const PROJECTS = [
     ]
   },
   {
-    id: 'cybersecurity-bot',
-    type: 'Desktop App',
-    role: 'Windows desktop development',
-    title: 'CyberSecurity Awareness Bot',
-    desc: 'A desktop chatbot that educates users on cybersecurity best practices and promotes safer digital habits.',
-    full: 'CyberShield Bot is a Windows desktop application built with C# and WPF that acts as an interactive cybersecurity awareness tool. Users can ask the bot questions about online safety, password practices, phishing, and more. The bot uses a knowledge base to provide helpful, accurate guidance.',
-    tags: ['C#', 'WPF', 'SQL Server', '.NET'],
-    category: 'desktop',
-    github: 'https://github.com/Nethomboni/CyberSecurityBotApp/tree/452f955f750068390ae72beaf13fb00b0deb7bc5',
-    thumbnail: '../assets/images/cybersecurity_screenshots/Screenshot 2026-05-31 163845.png',
-    features: ['Interactive chat interface', 'Cybersecurity knowledge base', 'Phishing awareness module', 'Password strength checker', 'Safe browsing tips', 'Progress tracking'],
-    challenges: ['Natural language understanding on desktop', 'Engaging UX for educational content', 'Maintaining accurate info base'],
-    solutions: ['Pattern-matching NLP with keyword scoring', 'Gamified learning with quiz mode', 'Structured JSON knowledge base'],
+    id: 'gift-of-the-givers',
+    type: 'Web Application',
+    role: 'Unit testing & Azure deployment (team project)',
+    title: 'Gift of the Givers',
+    desc: 'A humanitarian relief platform where visitors can explore relief projects, donate and register as volunteers.',
+    full: 'Gift of the Givers is a team-built ASP.NET Core MVC (.NET 8) web application for a humanitarian relief foundation. Visitors can browse relief projects with funding progress and updates, make one-time or recurring donations that generate a reference and tax certificate, and sign up as volunteers. ASP.NET Core Identity provides separate donor and employee areas, and two Azure Functions handle tax-certificate generation and project-update logging to Azure Table Storage. My part covered the unit test suite and deploying the web app to Azure App Service.',
+    tags: ['C#', 'ASP.NET Core', 'Entity Framework', 'Azure', 'xUnit', 'Bootstrap'],
+    category: 'websites',
+    github: 'https://github.com/Nethomboni/Gift-Of-The-Givers',
+    outcome: 'Deployed live on Azure App Service, with tests running in an Azure DevOps pipeline',
+    thumbnail: '../assets/images/Gift of the Givers/home-page.png',
+    features: ['Relief project listings with funding progress', 'One-time & recurring donations', 'Donation reference & tax certificate', 'Volunteer registration', 'Donor and employee dashboards', 'Azure Functions integration'],
+    challenges: ['Testing controllers that depend on Identity, EF Core and an external Functions API', 'Keeping donations working if the Azure Functions host is unavailable', 'Shipping a multi-project .NET 8 solution to the cloud'],
+    solutions: ['xUnit tests with Moq and the EF Core InMemory provider', 'A typed, best-effort Functions API client so the donation still completes', 'Azure App Service deployment with an Azure DevOps build-and-test pipeline'],
     screenshots: [
-      '../assets/images/cybersecurity_screenshots/Screenshot 2026-05-31 163845.png',
-      '../assets/images/cybersecurity_screenshots/Screenshot 2026-05-31 165237.png',
-      '../assets/images/cybersecurity_screenshots/Screenshot 2026-05-31 165443.png'
+      '../assets/images/Gift of the Givers/home-page.png',
+      '../assets/images/Gift of the Givers/featured-projects.png',
+      '../assets/images/Gift of the Givers/projects-page.png',
+      '../assets/images/Gift of the Givers/project-details.png',
+      '../assets/images/Gift of the Givers/donate-page.png'
     ]
   },
   {
@@ -167,9 +170,10 @@ const CATEGORY_ICON = { websites: 'globe', mobile: 'smartphone', desktop: 'lapto
 const TECH_LOGO = {
   'HTML': 'html5', 'CSS': 'css3', 'JavaScript': 'javascript', 'PHP': 'php', 'Kotlin': 'kotlin',
   'Firebase': 'firebase', 'Android Studio': 'androidstudio', 'C#': 'csharp', '.NET': 'dotnet',
-  'Next.js': 'nextjs', 'React': 'react', 'TypeScript': 'typescript', 'Tailwind CSS': 'tailwindcss'
+  'Next.js': 'nextjs', 'React': 'react', 'TypeScript': 'typescript', 'Tailwind CSS': 'tailwindcss',
+  'ASP.NET Core': 'dotnet', 'Bootstrap': 'bootstrap'
 };
-const TECH_FALLBACK = { 'WPF': 'app-window', 'SQL Server': 'database' };
+const TECH_FALLBACK = { 'WPF': 'app-window', 'SQL Server': 'database', 'Entity Framework': 'database', 'Azure': 'globe', 'xUnit': 'shield-check' };
 
 const ico = (name, opts) => (window.Icons ? Icons.icon(name, opts) : '');
 
