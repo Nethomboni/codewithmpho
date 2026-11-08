@@ -163,7 +163,7 @@ export default async function handler(req, res) {
   try {
     const { data: existing, error: checkError } = await supabase
       .from('appointments')
-      .select('id')
+      .select('appointment_time')
       .eq('appointment_date', appointmentDate)
       .eq('appointment_time', appointmentTime + ':00')
       .maybeSingle();
@@ -191,8 +191,9 @@ export default async function handler(req, res) {
         project_details:  projectDetails || null,
         appointment_date: appointmentDate,
         appointment_time: appointmentTime + ':00',
-      }])
-      .select();
+      }]);
+    // No .select() here: the anon role can only read appointment_date and
+    // appointment_time, so asking for the inserted row back would be refused.
 
     // TEMPORARY DEBUG — remove once the null-data mystery is solved.
     console.log('create-booking DEBUG:', {
