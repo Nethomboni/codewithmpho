@@ -11,26 +11,26 @@
  */
 const PROJECTS = [
   {
-    id: 'pastimes',
+    id: 'rethread',
     type: 'E-Commerce Website',
     role: 'Full-stack web development',
-    title: 'Pastimes',
-    desc: 'An e-commerce website for a fashion brand offering a seamless shopping experience with clean design and secure checkout.',
-    full: 'Pastimes is a full-featured e-commerce platform built for a fashion brand. The project involved creating a complete online shopping experience including product catalog, cart management, user authentication, and a secure checkout process. Special attention was paid to visual aesthetics to match the brand\'s luxurious identity.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+    title: 'ReThread',
+    desc: 'A marketplace for buying and selling pre-loved branded clothing in South Africa, with an Outfit Builder that rewards whole looks.',
+    full: 'ReThread is a full-stack PHP and MySQL marketplace for second-hand branded clothing. Shoppers browse with category, brand, size, condition and price filters, save items to a wishlist, message sellers and check out by card or EFT. The Outfit Builder lets them put a look together from different sellers and unlocks bundle discounts from 10% for two pieces up to 30% for six or more. Verified sellers list and manage their own items, and an admin dashboard handles account approvals, listings, orders and sales reports. It started as the Pastimes Portfolio of Evidence and was rebuilt into a complete store, now hosted on Vercel with a cloud MySQL database.',
+    tags: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
     category: 'websites',
-    github: 'https://github.com/RC-WEDE6021-PART-2-AND-PART-3/rc-pta-wede6021-part2-and-3-lets_code',
-    thumbnail: '../assets/images/Pastimes/mock-up-home-page.png',
-    features: ['Product catalog & filtering', 'Shopping cart system', 'User authentication', 'Secure checkout flow', 'Admin dashboard', 'Mobile responsive'],
-    challenges: ['Building a seamless checkout UX', 'Optimizing image loading performance', 'Implementing secure payment flow'],
-    solutions: ['Custom cart logic with localStorage', 'Lazy loading & WebP images', 'PHP backend validation with form tokens'],
+    github: 'https://github.com/Nethomboni/ReThread',
+    outcome: 'Live on Vercel (PHP runtime) with a TiDB Cloud MySQL database',
+    thumbnail: '../assets/images/ReThread/home-page.png',
+    features: ['Outfit Builder with bundle discounts up to 30%', 'Filtered browsing, search & wishlist', 'Card or EFT checkout with order tracking', 'Seller listings with buyer messaging', 'Admin dashboard & sales reports', 'Mobile responsive'],
+    challenges: ['Stopping the same one-off item from being sold twice', 'Running PHP sessions and photo uploads on a host with no permanent disk', 'Keeping a guest\'s outfit and discount intact through login and checkout'],
+    solutions: ['Checkout runs in a database transaction with row locks', 'Sessions and uploads stored in MySQL when hosted on Vercel', 'Outfit kept across login, with the discount carried into the cart'],
     screenshots: [
-      '../assets/images/Pastimes/home-page.png',
-      '../assets/images/Pastimes/browse-page.png',
-      '../assets/images/Pastimes/view-item.png',
-      '../assets/images/Pastimes/shopping-cart-page.png',
-      '../assets/images/Pastimes/sell-page.png',
-      '../assets/images/Pastimes/login-page.png'
+      '../assets/images/ReThread/home-page.png',
+      '../assets/images/ReThread/browse-page.png',
+      '../assets/images/ReThread/item-page.png',
+      '../assets/images/ReThread/outfit-builder.png',
+      '../assets/images/ReThread/cart-page.png'
     ]
   },
   {
@@ -171,7 +171,7 @@ const TECH_LOGO = {
   'HTML': 'html5', 'CSS': 'css3', 'JavaScript': 'javascript', 'PHP': 'php', 'Kotlin': 'kotlin',
   'Firebase': 'firebase', 'Android Studio': 'androidstudio', 'C#': 'csharp', '.NET': 'dotnet',
   'Next.js': 'nextjs', 'React': 'react', 'TypeScript': 'typescript', 'Tailwind CSS': 'tailwindcss',
-  'ASP.NET Core': 'dotnet', 'Bootstrap': 'bootstrap'
+  'ASP.NET Core': 'dotnet', 'Bootstrap': 'bootstrap', 'MySQL': 'mysql'
 };
 const TECH_FALLBACK = { 'WPF': 'app-window', 'SQL Server': 'database', 'Entity Framework': 'database', 'Azure': 'globe', 'xUnit': 'shield-check' };
 
